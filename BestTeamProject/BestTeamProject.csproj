@@ -144,6 +144,7 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Photos\logo.png" />
+    <Content Include="Photos\Picture1.png" />
     <Content Include="Photos\shoppingCart.png" />
     <Content Include="Photos\ShoppingCartNew.png" />
     <Content Include="Photos\white-shopping-cart.png" />

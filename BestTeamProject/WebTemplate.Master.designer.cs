@@ -58,13 +58,22 @@ namespace BestTeamProject {
         protected global::System.Web.UI.WebControls.Button searchButton;
         
         /// <summary>
-        /// Image2 control.
+        /// homeButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image2;
+        protected global::System.Web.UI.WebControls.Image homeButton;
+        
+        /// <summary>
+        /// cartButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image cartButton;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

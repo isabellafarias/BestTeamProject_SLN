@@ -17,12 +17,7 @@
             font-size: xx-large;
             text-align: left;
         }
-        .auto-style3 {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: medium;
-            font-weight: normal;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -34,10 +29,11 @@
 &nbsp;
                     <asp:TextBox ID="searchTextBox" runat="server" Height="42px" style="font-family: 'Tw Cen MT'" Width="546px"></asp:TextBox>
 &nbsp;&nbsp;
-                    <asp:Button ID="searchButton" runat="server" Height="46px" Text="Search" style="font-family: Verdana, Geneva, Tahoma, sans-serif" />
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Image ID="Image2" runat="server" Height="75px" ImageUrl="~/Photos/ShoppingCartNew.png" style="margin-left: 154px" />
-                    <span class="auto-style3">Cart</span></h1>
+                    <asp:Button ID="searchButton" runat="server" Height="46px" Text="Search" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700; color: #333333;" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Image ID="homeButton" runat="server" Height="75px" ImageUrl="~/Photos/Picture1.png" />
+                    &nbsp;
+                    <asp:Image ID="cartButton" runat="server" Height="75px" ImageUrl="~/Photos/ShoppingCartNew.png" style="margin-left: 0px" />
+                    </h1>
             </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
