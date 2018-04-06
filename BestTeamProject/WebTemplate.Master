@@ -28,7 +28,7 @@
                     &nbsp;</h1>
                 <h1 class="auto-style2">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Image ID="Image1" runat="server" Height="150px" ImageUrl="~/Photos/logo.png" />
+                    <asp:Image ID="speedReadLogo" runat="server" Height="150px" ImageUrl="~/Photos/logo.png" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="searchTextBox" runat="server" Height="42px" style="font-family: 'Tw Cen MT'" Width="546px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;
