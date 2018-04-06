@@ -14,23 +14,26 @@
         .auto-style2 {
             color: #FFFFFF;
             font-family: helvetica;
-            font-size: xx-large;
+            font-size: xx-small;
             text-align: left;
+            height: 4px;
         }
         </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <div class="auto-style1" style="height: 158px; background-color: #333333">
+            <div class="auto-style1" style="height: 186px; background-color: #333333">
                 <h1 class="auto-style2">
-                    &nbsp;&nbsp;
+                    &nbsp;</h1>
+                <h1 class="auto-style2">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Image ID="Image1" runat="server" Height="150px" ImageUrl="~/Photos/logo.png" />
-&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="searchTextBox" runat="server" Height="42px" style="font-family: 'Tw Cen MT'" Width="546px"></asp:TextBox>
-&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="searchButton" runat="server" Height="46px" Text="Search" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700; color: #333333;" />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Image ID="homeButton" runat="server" Height="75px" ImageUrl="~/Photos/Picture1.png" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Image ID="homeButton" runat="server" Height="75px" ImageUrl="~/Photos/Picture1.png" />
                     &nbsp;
                     <asp:Image ID="cartButton" runat="server" Height="75px" ImageUrl="~/Photos/ShoppingCartNew.png" style="margin-left: 0px" />
                     </h1>
