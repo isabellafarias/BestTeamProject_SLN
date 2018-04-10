@@ -1,0 +1,55 @@
+﻿body {
+}
+
+.bookImg{
+    float: left;
+}
+
+.itemLabel {
+    float: left;
+    margin-left: 3%;
+    margin-top: 1%;
+    width: 85%;
+
+}
+
+.options {
+    float: left;
+    width: 87%;
+    margin-left: 3%;
+}
+
+.priceLabel {
+    float: left;
+    margin-left: 3%;
+    color: #656565;
+}
+
+.quantity {
+
+    margin-top: 4%;
+}
+
+.quantityLabel {
+    margin-left: 2%;
+}
+
+.remove {
+    margin-right: 2%;
+}
+
+.shoppingItem {
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    width: 74%;
+    float: left;
+    margin: 0% 0 1% 0;
+}
+
+#totals {
+    float: right;
+    border: solid 1px black;
+    height: 350px;
+    z-index: 10;
+    width:25%;
+}

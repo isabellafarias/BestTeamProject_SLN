@@ -4,6 +4,8 @@
 
 <html>
 <head runat="server">
+    <link rel="stylesheet" runat="server" media="screen" href="~/css/shoppingCart.css" />
+
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -17,6 +19,9 @@
             font-size: xx-small;
             text-align: left;
             height: 4px;
+        }
+        footer {
+            clear: both;
         }
         </style>
 </head>
