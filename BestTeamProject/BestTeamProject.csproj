@@ -143,6 +143,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="loginAndCreatePage.aspx" />
     <Content Include="Photos\book.png" />
     <Content Include="Photos\logo.png" />
     <Content Include="Photos\Picture1.png" />
@@ -214,6 +215,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="loginAndCreatePage.aspx.cs">
+      <DependentUpon>loginAndCreatePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginAndCreatePage.aspx.designer.cs">
+      <DependentUpon>loginAndCreatePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="productPage.aspx.cs">
       <DependentUpon>productPage.aspx</DependentUpon>
