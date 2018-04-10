@@ -45,7 +45,7 @@
 &nbsp;
                     <asp:Button ID="searchButton" runat="server" Height="46px" Text="Search" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700; color: #333333;" />
                     </h1>
-                    <div id="navButtons" style="float:right"><asp:Image ID="homeButton" runat="server" Height="75px" ImageUrl="~/Photos/Picture1.png" ImageAlign="AbsMiddle" />
+                    <div id="navButtons" style="float:right"><asp:Image ID="homeButton" runat="server" Height="75px" ImageUrl="~/Photos/Picture1.png" ImageAlign="TextTop" />
                     &nbsp;
                     <asp:Image ID="cartButton" runat="server" Height="75px" ImageUrl="~/Photos/ShoppingCartNew.png" style="margin-right: 20px; margin-left: 10px" ImageAlign="TextTop" />                                   
                     </div>
@@ -55,7 +55,7 @@
         </div>
     </form>
     <footer>
-        <div style="height: 72px; background-color: #333333">
+        <div style="height: 72px; clear:both; position:absolute; bottom:0; width: 100%; background-color: #333333">
 
         </div>
     </footer>

@@ -177,6 +177,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="searchResultsPage.aspx" />
     <Content Include="shoppingCart.aspx" />
     <Content Include="Site.Master" />
     <Content Include="css\shoppingCart.css" />
@@ -214,6 +215,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="searchResultsPage.aspx.cs">
+      <DependentUpon>searchResultsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="searchResultsPage.aspx.designer.cs">
+      <DependentUpon>searchResultsPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="shoppingCart.aspx.cs">
       <DependentUpon>shoppingCart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -274,7 +282,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49807</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
