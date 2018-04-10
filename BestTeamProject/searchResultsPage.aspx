@@ -3,6 +3,7 @@
     <style type="text/css">
         .auto-style3 {
             width: 221px;
+            font-size: medium;
         }
         .auto-style5 {
             width: 212px;
@@ -21,6 +22,8 @@
         }
         .auto-style10 {
             width: 92%;
+            font-family: "Tw Cen MT";
+            font-size: medium;
         }
         .auto-style11 {
             width: 221px;
@@ -46,13 +49,16 @@
             width: 206px;
             height: 23px;
         }
+        .auto-style17 {
+            width: 221px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Search Results:</h1>
+    <h1 style="font-family: 'Tw Cen MT'">Search Results:</h1>
     <table id="searchTable" class="auto-style10">
         <tr>
-            <td class="auto-style3">Product</td>
+            <td class="auto-style17">Product</td>
             <td class="auto-style7">Price</td>
             <td class="auto-style8">Reviews</td>
             <td class="auto-style5">Quantity Available</td>

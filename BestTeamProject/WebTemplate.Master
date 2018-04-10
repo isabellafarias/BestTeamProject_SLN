@@ -15,13 +15,16 @@
         }
         .auto-style2 {
             color: #FFFFFF;
-            font-family: helvetica;
-            font-size: xx-small;
+            font-family: "Tw Cen MT";
+            font-size: x-small;
             text-align: left;
             height: 4px;
         }
         footer {
             clear: both;
+        }
+        .auto-style3 {
+            font-size: small;
         }
         </style>
 </head>
@@ -36,8 +39,8 @@
                     <asp:Image ID="speedReadLogo" runat="server" Height="150px" ImageUrl="~/Photos/logo.png" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="searchTextBox" runat="server" Height="42px" style="font-family: 'Tw Cen MT'" Width="546px"></asp:TextBox>
-                    &nbsp; Search By:
-                    <asp:DropDownList ID="DropDownList1" runat="server">
+                    &nbsp; <span class="auto-style3">Search By:</span>
+                    <asp:DropDownList ID="DropDownList1" runat="server" Height="46px" style="font-family: 'Tw Cen MT'; font-weight: 700">
                         <asp:ListItem>Product ID</asp:ListItem>
                         <asp:ListItem Selected="True">Product Name</asp:ListItem>
                         <asp:ListItem>Product Description</asp:ListItem>
@@ -55,7 +58,7 @@
         </div>
     </form>
     <footer>
-        <div style="height: 72px; clear:both; position:absolute; bottom:0; width: 100%; background-color: #333333">
+        <div style="height: 72px; background-color: #333333">
 
         </div>
     </footer>
