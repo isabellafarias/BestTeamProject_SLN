@@ -7,10 +7,8 @@ using System.Web.UI.WebControls;
 
 namespace BestTeamProject
 {
-    public partial class shoppingCart : System.Web.UI.Page
+    public partial class searchResultsPage : System.Web.UI.Page
     {
-
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
