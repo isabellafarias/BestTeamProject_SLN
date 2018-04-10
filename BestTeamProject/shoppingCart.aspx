@@ -1,52 +1,55 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebTemplate.Master" AutoEventWireup="true" CodeBehind="shoppingCart.aspx.cs" Inherits="BestTeamProject.shoppingCart" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .auto-style3 {
-            width: 68px;
-        }
-        .auto-style4 {
-            width: 71px;
-        }
-        .auto-style5 {
-            width: 76px;
-        }
-        .auto-style6 {
-            width: 68px;
-            height: 23px;
-        }
-        .auto-style7 {
-            width: 71px;
-            height: 23px;
-        }
-        .auto-style8 {
-            width: 76px;
-            height: 23px;
-        }
-        .auto-style9 {
-            height: 23px;
-        }
-        .auto-style10 {
-            width: 68px;
-            height: 22px;
-        }
-        .auto-style11 {
-            width: 71px;
-            height: 22px;
-        }
-        .auto-style12 {
-            width: 76px;
-            height: 22px;
-        }
-        .auto-style13 {
-            height: 22px;
-        }
-    </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div id="totals" style="">
+        <table id="totalsTable">
+            <tr class="topRow" id="topRowID">
+                <td>Item</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Total</td>
+            </tr>
+            <tr>
+                <td>#28812</td>
+                <td >45</td>
+                <td >1</td>
+                <td >45</td>
+            </tr>
+            <tr>
+                <td >#93415</td>
+                <td >85</td>
+                <td >1</td>
+                <td >85</td>
+            </tr>
+            <tr>
+                <td >#99765</td>
+                <td >15</td>
+                <td >1</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td >#34212</td>
+                <td >25</td>
+                <td >1</td>
+                <td>25</td>
+            </tr>
+            <tr class="totalsRow">
+                <td >Total</td>
+                <td ></td>
+                <td ></td>
+                <td >$170</td>
+            </tr>
+
+
+        </table>
+    </div>
     <div class="shoppingItem" style="height: 84px;">
         <asp:Image ID="Image1" class="bookImg" runat="server" Height="83px" ImageUrl="~/Photos/book.png" Width="84px" />
         <asp:Label ID="Label1" class="itemLabel" runat="server" Text="Book 1: Test Book (#28812)"></asp:Label>
+        <br />
         <asp:Label ID="Label2" class="priceLabel" runat="server" Text="$45"></asp:Label>
         <div class="options">
             <asp:Label ID="Label3" class="remove" runat="server" Text="Delete"></asp:Label>
@@ -88,47 +91,7 @@
             <asp:TextBox ID="TextBox4" runat="server" class="quantity" value="1"></asp:TextBox>
         </div>
     </div>
-    <div id="totals" style="">
-        <table style="width:100%;">
-            <tr>
-                <td class="auto-style3">Item</td>
-                <td class="auto-style4">Price</td>
-                <td class="auto-style5">Quantity</td>
-                <td>Total</td>
-            </tr>
-            <tr>
-                <td class="auto-style6">#28812</td>
-                <td class="auto-style7">45</td>
-                <td class="auto-style8">1</td>
-                <td class="auto-style9">45</td>
-            </tr>
-            <tr>
-                <td class="auto-style6">#93415</td>
-                <td class="auto-style7">85</td>
-                <td class="auto-style8">1</td>
-                <td class="auto-style9">85</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">#99765</td>
-                <td class="auto-style4">15</td>
-                <td class="auto-style5">1</td>
-                <td>15</td>
-            </tr>
-            <tr>
-                <td class="auto-style3">#34212</td>
-                <td class="auto-style4">25</td>
-                <td class="auto-style5">1</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td class="auto-style10">Total</td>
-                <td class="auto-style11"></td>
-                <td class="auto-style12"></td>
-                <td class="auto-style13">$170</td>
-            </tr>
 
-
-        </table>
-    </div>
+    
     
     </asp:Content>
