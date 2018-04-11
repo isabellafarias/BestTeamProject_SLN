@@ -3,13 +3,15 @@
 
 .bookImg{
     float: left;
+    
 }
 
 .itemLabel {
     float: left;
     margin-left: 3%;
-    margin-top: 1%;
+
     width: 85%;
+    font-size: 2em;
 
 }
 
@@ -21,13 +23,15 @@
 
 .priceLabel {
     float: left;
+    font-size: 1.5em;
     margin-left: 3%;
+    width: 87%;
     color: #656565;
 }
 
 .quantity {
 
-    margin-top: 4%;
+    margin-top: 1%;
 }
 
 .quantityLabel {
@@ -38,18 +42,51 @@
     margin-right: 2%;
 }
 
+.shoppingCartButton {
+    border: none;
+    background-color: lightblue;
+    height: 10%;
+    width: 80%;
+    margin: 1% 0;
+
+}
+
 .shoppingItem {
     border-top: solid 1px black;
     border-bottom: solid 1px black;
     width: 74%;
     float: left;
     margin: 0% 0 1% 0;
+    padding: 1% 0 1% 0;
+}
+
+.topRow {
+
+}
+
+#topRowID {
+    border-bottom: solid 1px black;
+    font-size: 1.25em;
+    margin-bottom: 2%;
 }
 
 #totals {
     float: right;
     border: solid 1px black;
-    height: 350px;
+    height: 50vh;
     z-index: 10;
     width:25%;
 }
+
+#totalsTable {
+    width: 100%;
+}
+
+
+.totalsRow {
+    margin-top: 80px;
+    border: solid 1px black;
+    border-collapse: collapse;
+    font-size: 1.25em;
+}
+
