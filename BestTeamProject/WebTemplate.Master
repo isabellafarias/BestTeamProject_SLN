@@ -24,7 +24,7 @@
             clear: both;
         }
         .auto-style3 {
-            font-size: small;
+            font-size: medium;
         }
         .auto-style4 {
             text-align: center;
@@ -45,7 +45,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="searchTextBox" runat="server" Height="42px" style="font-family: 'Tw Cen MT'" Width="546px"></asp:TextBox>
                     &nbsp; <span class="auto-style3">Search By:</span>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Height="46px" style="font-family: 'Tw Cen MT'; font-weight: 700">
+                    <asp:DropDownList ID="DropDownList1" runat="server" Height="46px" style="font-family: 'Tw Cen MT'; font-weight: 700; font-size: medium;" ForeColor="#333333">
                         <asp:ListItem>Product ID</asp:ListItem>
                         <asp:ListItem Selected="True">Product Name</asp:ListItem>
                         <asp:ListItem>Product Description</asp:ListItem>
@@ -64,7 +64,7 @@
     </form>
     <footer>
         <div style="height: 72px; background-color: #333333; color:white" class="auto-style4">
-            <em>Don't see the book you're looking for? Contact us at: service@speedread.com
+            <em style="font-size: medium">Don't see the book you're looking for? Contact us at: service@speedread.com
         </em>
         </div>
     </footer>

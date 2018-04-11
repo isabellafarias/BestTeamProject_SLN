@@ -4,7 +4,7 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div id="totals" style="font-family:Tw Cen MT">
+    <div id="totals" style="font-family:Tw Cen MT; color:#333333">
         <table id="totalsTable">
             <tr class="topRow" id="topRowID">
                 <td>Item</td>
@@ -51,7 +51,7 @@
         </div>
 
     </div>
-    <div class="shoppingItem" style="height: 84px;font-family:Tw Cen MT">
+    <div class="shoppingItem" style="height: 84px;font-family:Tw Cen MT; color:#333333">
         <asp:Image ID="Image1" class="bookImg" runat="server" Height="83px" ImageUrl="~/Photos/book.png" Width="84px" />
         <asp:Label ID="Label1" class="itemLabel" runat="server" Text="Book 1: Test Book (#28812)"></asp:Label>
         <br />
@@ -63,7 +63,7 @@
             <asp:TextBox ID="TextBox1" runat="server" class="quantity" value="1"></asp:TextBox>
         </div>
     </div>
-     <div class="shoppingItem" style="height: 84px;font-family:Tw Cen MT">
+     <div class="shoppingItem" style="height: 84px;font-family:Tw Cen MT; color:#333333">
         <asp:Image ID="Image2" class="bookImg" runat="server" Height="83px" ImageUrl="~/Photos/book.png" Width="84px" />
         <asp:Label ID="Label4" class="itemLabel" runat="server" Text="Book 2: Sequel to the Test (#93415)"></asp:Label>
         <asp:Label ID="Label5" class="priceLabel" runat="server" Text="$85"></asp:Label>

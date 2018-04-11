@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebTemplate.Master" AutoEventWireup="true" CodeBehind="searchResultsPage.aspx.cs" Inherits="BestTeamProject.searchResultsPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        *{font-family:Tw Cen MT}
+        *{font-family:Tw Cen MT; color:#333333}
         .auto-style3 {
             width: 221px;
         font-size: medium;
@@ -57,7 +57,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1 style="font-family: 'Tw Cen MT'">Search Results:</h1>
-    <table id="searchTable" class="auto-style10" style="font-family:Tw Cen MT; font-size:medium">
+    <table id="searchTable" class="auto-style10" style="font-family:Tw Cen MT; font-size:medium; color:#333333">
         <tr>
             <td class="auto-style17">Product</td>
             <td class="auto-style7">Price</td>
