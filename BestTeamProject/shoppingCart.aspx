@@ -42,9 +42,14 @@
                 <td ></td>
                 <td >$170</td>
             </tr>
-
-
         </table>
+
+
+        <asp:Button ID="Button1" runat="server" Text="Purchase" class="shoppingCartButton"/> <br />
+        <asp:Button ID="Button2" runat="server" Text="Continue Shopping"  class="shoppingCartButton"/> <br />
+        <asp:Button ID="Button3" runat="server" Text="Clear Cart"  class="shoppingCartButton"/> <br />
+
+
     </div>
     <div class="shoppingItem" style="height: 84px;">
         <asp:Image ID="Image1" class="bookImg" runat="server" Height="83px" ImageUrl="~/Photos/book.png" Width="84px" />
