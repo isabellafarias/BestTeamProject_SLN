@@ -3,8 +3,8 @@
     <style type="text/css">
         .auto-style3 {
             width: 221px;
-            font-size: medium;
-        }
+        font-size: medium;
+    }
         .auto-style5 {
             width: 212px;
         }
@@ -22,9 +22,9 @@
         }
         .auto-style10 {
             width: 92%;
-            font-family: "Tw Cen MT";
-            font-size: medium;
-        }
+        font-family: "Tw Cen MT";
+        font-size: medium;
+    }
         .auto-style11 {
             width: 221px;
             height: 23px;
@@ -49,9 +49,9 @@
             width: 206px;
             height: 23px;
         }
-        .auto-style17 {
-            width: 221px;
-        }
+    .auto-style17 {
+        width: 221px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
