@@ -21,6 +21,20 @@
             width: 273px;
             text-align: center;
         }
+        .auto-style11 {
+            width: 214px;
+            text-align: center;
+            height: 30px;
+        }
+        .auto-style12 {
+            width: 267px;
+            text-align: center;
+            height: 30px;
+        }
+        .auto-style13 {
+            text-align: center;
+            height: 30px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -59,7 +73,9 @@
             <td class="auto-style8">
                 <asp:TextBox ID="createEmailAddressTextBox" runat="server" Width="202px"></asp:TextBox>
             </td>
-            <td class="auto-style1" colspan="2">&nbsp;</td>
+            <td class="auto-style1" colspan="2">
+                <asp:Button ID="loginButton" runat="server" Text="Login" Width="96px" />
+            </td>
         </tr>
         <tr>
             <td class="auto-style9">Password:</td>
@@ -69,16 +85,16 @@
             <td class="auto-style1" colspan="2">&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style9">Confirm Password:</td>
-            <td class="auto-style8">
+            <td class="auto-style11">Confirm Password:</td>
+            <td class="auto-style12">
                 <asp:TextBox ID="createConfirmPasswordTextBox" runat="server" Width="199px"></asp:TextBox>
             </td>
-            <td class="auto-style1" colspan="2">&nbsp;</td>
+            <td class="auto-style13" colspan="2"></td>
         </tr>
         <tr>
-            <td class="auto-style9">&nbsp;</td>
-            <td class="auto-style8">&nbsp;</td>
-            <td class="auto-style1" colspan="2">&nbsp;</td>
+            <td class="auto-style1" colspan="2">
+                <asp:Button ID="createAccountButton" runat="server" Text="Create Account" Width="149px" />
+            </td>
         </tr>
     </table>
     
