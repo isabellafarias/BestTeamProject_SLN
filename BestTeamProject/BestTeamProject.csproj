@@ -145,6 +145,7 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Homepage.aspx" />
+    <Content Include="loginAndCreatePage.aspx" />
     <Content Include="Photos\book.png" />
     <Content Include="Photos\logo.png" />
     <Content Include="Photos\Picture1.png" />
@@ -222,6 +223,12 @@
     </Compile>
     <Compile Include="Homepage.aspx.designer.cs">
       <DependentUpon>Homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginAndCreatePage.aspx.cs">
+      <DependentUpon>loginAndCreatePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginAndCreatePage.aspx.designer.cs">
+      <DependentUpon>loginAndCreatePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="searchResultsPage.aspx.cs">
