@@ -44,11 +44,11 @@
             </tr>
         </table>
 
-
-        <asp:Button ID="Button1" runat="server" Text="Purchase" class="shoppingCartButton"/> <br />
-        <asp:Button ID="Button2" runat="server" Text="Continue Shopping"  class="shoppingCartButton"/> <br />
-        <asp:Button ID="Button3" runat="server" Text="Clear Cart"  class="shoppingCartButton"/> <br />
-
+        <div id="buttons">
+            <asp:Button ID="topButton" runat="server" Text="Purchase" class="shoppingCartButton"/> <br />
+            <asp:Button ID="Button2" runat="server" Text="Continue Shopping"  class="shoppingCartButton"/> <br />
+            <asp:Button ID="Button3" runat="server" Text="Clear Cart"  class="shoppingCartButton"/> <br />
+        </div>
 
     </div>
     <div class="shoppingItem" style="height: 84px;">
