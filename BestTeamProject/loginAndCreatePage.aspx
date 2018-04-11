@@ -37,41 +37,41 @@
         <tr>
             <td class="auto-style9">First Name:</td>
             <td class="auto-style8">
-                <asp:TextBox ID="TextBox1" runat="server" Width="203px"></asp:TextBox>
+                <asp:TextBox ID="createFirstNameTextBox" runat="server" Width="203px"></asp:TextBox>
             </td>
             <td class="auto-style10">Email Address:</td>
             <td class="auto-style1">
-                <asp:TextBox ID="TextBox6" runat="server" Width="171px"></asp:TextBox>
+                <asp:TextBox ID="loginEmailAddressTextBox" runat="server" Width="171px"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style9">Last Name:</td>
             <td class="auto-style8">
-                <asp:TextBox ID="TextBox2" runat="server" Width="202px"></asp:TextBox>
+                <asp:TextBox ID="createLastNameTextBox" runat="server" Width="202px"></asp:TextBox>
             </td>
             <td class="auto-style1">Password:</td>
             <td class="auto-style1">
-                <asp:TextBox ID="TextBox7" runat="server" Width="169px"></asp:TextBox>
+                <asp:TextBox ID="loginPasswordTextBox" runat="server" Width="169px"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style9">Email Address:</td>
             <td class="auto-style8">
-                <asp:TextBox ID="TextBox3" runat="server" Width="202px"></asp:TextBox>
+                <asp:TextBox ID="createEmailAddressTextBox" runat="server" Width="202px"></asp:TextBox>
             </td>
             <td class="auto-style1" colspan="2">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style9">Password:</td>
             <td class="auto-style8">
-                <asp:TextBox ID="TextBox4" runat="server" Width="201px"></asp:TextBox>
+                <asp:TextBox ID="createPasswordTextBox" runat="server" Width="201px"></asp:TextBox>
             </td>
             <td class="auto-style1" colspan="2">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style9">Confirm Password:</td>
             <td class="auto-style8">
-                <asp:TextBox ID="TextBox5" runat="server" Width="199px"></asp:TextBox>
+                <asp:TextBox ID="createConfirmPasswordTextBox" runat="server" Width="199px"></asp:TextBox>
             </td>
             <td class="auto-style1" colspan="2">&nbsp;</td>
         </tr>
