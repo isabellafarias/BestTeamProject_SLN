@@ -43,13 +43,15 @@
 }
 
 .shoppingCartButton {
-    border: none;
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
     background-color: lightblue;
     height: 20%;
     width: 80%;
     margin: 1% 10%;
     cursor: pointer;
-
+    font-weight: 700;
 }
 
 .shoppingItem {
@@ -64,6 +66,8 @@
 #buttons {
     margin-top: 5%;
     height: 50%;
+    color:white;
+    font-weight: 700;
 }
 
 .topRow {
