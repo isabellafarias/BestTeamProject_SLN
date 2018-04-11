@@ -36,9 +36,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <div class="auto-style1" style="height: 186px; background-color: #333333">
-                <h1 class="auto-style2">
-                    &nbsp;</h1>
+            <div class="auto-style1" style="height: 186px; background-color: #333333; margin-left:auto; margin-right:auto; width:100%; white-space:nowrap">
+
                 <h1 style="float:left" class="auto-style2">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Image ID="speedReadLogo" runat="server" Height="150px" ImageUrl="~/Photos/logo.png" />
@@ -53,7 +52,7 @@
 &nbsp;
                     <asp:Button ID="searchButton" runat="server" Height="46px" Text="Search" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700; color: #333333;" />
                     </h1>
-                    <div id="navButtons" style="float:right"><asp:Image ID="homeButton" runat="server" Height="75px" ImageUrl="~/Photos/Picture1.png" ImageAlign="TextTop" />
+                    <div id="navButtons" style="float:right; margin-top:20px"><asp:Image ID="homeButton" runat="server" Height="75px" ImageUrl="~/Photos/person.png" ImageAlign="TextTop" />
                     &nbsp;
                     <asp:Image ID="cartButton" runat="server" Height="75px" ImageUrl="~/Photos/ShoppingCartNew.png" style="margin-right: 20px; margin-left: 10px" ImageAlign="TextTop" />                                   
                     </div>

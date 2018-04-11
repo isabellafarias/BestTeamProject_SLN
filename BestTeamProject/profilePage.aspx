@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebTemplate.Master" AutoEventWireup="true" CodeBehind="profilePage.aspx.cs" Inherits="BestTeamProject.profilePage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
+
+        *{font-family:Tw Cen MT; color:#333333}
+
         .auto-style5 {
             text-align: center;
             width: 398px;
