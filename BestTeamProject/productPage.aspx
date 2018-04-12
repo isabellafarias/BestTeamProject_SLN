@@ -13,7 +13,8 @@
         <asp:Label ID="Label1" runat="server" Height="182px" Text="Book 1" style="float:left; margin-left:20PX; font-size:200px"></asp:Label>
         <p style="clear:both">
             <br />
-            Here is where the description of the book will go
+            <span class="auto-style3">Here is where the description of the book will go
+        </span>
         </p>
 
     </div>

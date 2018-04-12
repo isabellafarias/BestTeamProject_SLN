@@ -6,7 +6,7 @@
 <head runat="server">
     <link rel="stylesheet" runat="server" media="screen" href="~/css/shoppingCart.css" />
 
-    <title></title>
+    <title>SpeedRead</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
@@ -22,9 +22,12 @@
         }
         footer {
             clear: both;
+            position: fixed;
+            bottom:0;
+            width: 100%;
         }
         .auto-style3 {
-            font-size: medium;
+            font-size: large;
         }
         .auto-style4 {
             text-align: center;
@@ -44,13 +47,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="searchTextBox" runat="server" Height="42px" style="font-family: 'Tw Cen MT'" Width="546px"></asp:TextBox>
                     &nbsp; <span class="auto-style3">Search By:</span>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Height="46px" style="font-family: 'Tw Cen MT'; font-weight: 700; font-size: medium;" ForeColor="#333333">
+                    <asp:DropDownList ID="DropDownList1" runat="server" Height="46px" style="font-family: 'Tw Cen MT'; font-weight: 700; font-size: large;" ForeColor="#333333">
                         <asp:ListItem>Product ID</asp:ListItem>
                         <asp:ListItem Selected="True">Product Name</asp:ListItem>
                         <asp:ListItem>Product Description</asp:ListItem>
                     </asp:DropDownList>
 &nbsp;
-                    <asp:Button ID="searchButton" runat="server" Height="46px" Text="Search" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700; color: #333333;" />
+                    <asp:Button ID="searchButton" runat="server" Height="46px" Text="Search" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700; color: #333333; font-size: large;" BackColor="White" />
                     </h1>
                     <div id="navButtons" style="float:right; margin-top:20px"><asp:Image ID="homeButton" runat="server" Height="75px" ImageUrl="~/Photos/person.png" ImageAlign="TextTop" />
                     &nbsp;

@@ -8,7 +8,7 @@
         .auto-style5 {
             text-align: justify;
             font-family: "Tw Cen MT";
-            font-size: large;
+            font-size: x-large;
         }
         *{
             color:#333333;
