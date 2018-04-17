@@ -148,6 +148,7 @@
     <Content Include="loginAndCreatePage.aspx" />
     <Content Include="Photos\book.png" />
     <Content Include="Photos\logo.png" />
+    <Content Include="Photos\person.png" />
     <Content Include="Photos\Picture1.png" />
     <Content Include="Photos\shoppingCart.png" />
     <Content Include="Photos\ShoppingCartNew.png" />

@@ -6,7 +6,7 @@
 <head runat="server">
     <link rel="stylesheet" runat="server" media="screen" href="~/css/shoppingCart.css" />
 
-    <title></title>
+    <title>SpeedRead</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
@@ -22,9 +22,12 @@
         }
         footer {
             clear: both;
+            position: fixed;
+            bottom:0;
+            width: 100%;
         }
         .auto-style3 {
-            font-size: medium;
+            font-size: large;
         }
         .auto-style4 {
             text-align: center;
@@ -36,24 +39,23 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <div class="auto-style1" style="height: 186px; background-color: #333333">
-                <h1 class="auto-style2">
-                    &nbsp;</h1>
+            <div class="auto-style1" style="height: 186px; background-color: #333333; margin-left:auto; margin-right:auto; width:100%; white-space:nowrap">
+
                 <h1 style="float:left" class="auto-style2">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Image ID="speedReadLogo" runat="server" Height="150px" ImageUrl="~/Photos/logo.png" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="searchTextBox" runat="server" Height="42px" style="font-family: 'Tw Cen MT'" Width="546px"></asp:TextBox>
                     &nbsp; <span class="auto-style3">Search By:</span>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Height="46px" style="font-family: 'Tw Cen MT'; font-weight: 700; font-size: medium;" ForeColor="#333333">
+                    <asp:DropDownList ID="DropDownList1" runat="server" Height="46px" style="font-family: 'Tw Cen MT'; font-weight: 700; font-size: large;" ForeColor="#333333">
                         <asp:ListItem>Product ID</asp:ListItem>
                         <asp:ListItem Selected="True">Product Name</asp:ListItem>
                         <asp:ListItem>Product Description</asp:ListItem>
                     </asp:DropDownList>
 &nbsp;
-                    <asp:Button ID="searchButton" runat="server" Height="46px" Text="Search" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700; color: #333333;" />
+                    <asp:Button ID="searchButton" runat="server" Height="46px" Text="Search" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700; color: #333333; font-size: large;" BackColor="White" />
                     </h1>
-                    <div id="navButtons" style="float:right"><asp:Image ID="homeButton" runat="server" Height="75px" ImageUrl="~/Photos/Picture1.png" ImageAlign="TextTop" />
+                    <div id="navButtons" style="float:right; margin-top:20px"><asp:Image ID="homeButton" runat="server" Height="75px" ImageUrl="~/Photos/person.png" ImageAlign="TextTop" />
                     &nbsp;
                     <asp:Image ID="cartButton" runat="server" Height="75px" ImageUrl="~/Photos/ShoppingCartNew.png" style="margin-right: 20px; margin-left: 10px" ImageAlign="TextTop" />                                   
                     </div>
