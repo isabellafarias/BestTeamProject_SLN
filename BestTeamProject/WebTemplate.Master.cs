@@ -13,5 +13,20 @@ namespace BestTeamProject
         {
 
         }
+
+        protected void cartButton_Click(object sender, ImageClickEventArgs e)
+        {
+            Server.Transfer("shoppingCart.aspx", true);
+        }
+
+        protected void ProfileButton_Click(object sender, ImageClickEventArgs e)
+        {
+            Server.Transfer("profilePage.aspx", true);
+        }
+
+        protected void speedReadLogo_Click(object sender, ImageClickEventArgs e)
+        {
+            Server.Transfer("Homepage.aspx", true);
+        }
     }
 }

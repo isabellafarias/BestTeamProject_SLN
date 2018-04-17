@@ -43,7 +43,7 @@
 
                 <h1 style="float:left" class="auto-style2">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Image ID="speedReadLogo" runat="server" Height="150px" ImageUrl="~/Photos/logo.png" />
+                    <asp:ImageButton ID="speedReadLogo" runat="server" Height="150px" ImageUrl="~/Photos/logo.png" OnClick="speedReadLogo_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="searchTextBox" runat="server" Height="42px" style="font-family: 'Tw Cen MT'" Width="546px"></asp:TextBox>
                     &nbsp; <span class="auto-style3">Search By:</span>
@@ -55,9 +55,9 @@
 &nbsp;
                     <asp:Button ID="searchButton" runat="server" Height="46px" Text="Search" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700; color: #333333; font-size: large;" BackColor="White" />
                     </h1>
-                    <div id="navButtons" style="float:right; margin-top:20px"><asp:Image ID="homeButton" runat="server" Height="75px" ImageUrl="~/Photos/person.png" ImageAlign="TextTop" />
+                    <div id="navButtons" style="float:right; margin-top:20px"><asp:ImageButton ID="ProfileButton" runat="server" Height="75px" ImageUrl="~/Photos/person.png" ImageAlign="TextTop" OnClick="ProfileButton_Click" />
                     &nbsp;
-                    <asp:Image ID="cartButton" runat="server" Height="75px" ImageUrl="~/Photos/ShoppingCartNew.png" style="margin-right: 20px; margin-left: 10px" ImageAlign="TextTop" />                                   
+                    <asp:ImageButton ID="cartButton" runat="server" Height="75px" ImageUrl="~/Photos/ShoppingCartNew.png" style="margin-right: 20px; margin-left: 10px" ImageAlign="TextTop" OnClick="cartButton_Click" />                                   
                     </div>
             </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

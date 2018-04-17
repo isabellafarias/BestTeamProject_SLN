@@ -37,7 +37,7 @@ namespace BestTeamProject {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image speedReadLogo;
+        protected global::System.Web.UI.WebControls.ImageButton speedReadLogo;
         
         /// <summary>
         /// searchTextBox control.
@@ -67,13 +67,13 @@ namespace BestTeamProject {
         protected global::System.Web.UI.WebControls.Button searchButton;
         
         /// <summary>
-        /// homeButton control.
+        /// ProfileButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image homeButton;
+        protected global::System.Web.UI.WebControls.ImageButton ProfileButton;
         
         /// <summary>
         /// cartButton control.
@@ -82,7 +82,7 @@ namespace BestTeamProject {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image cartButton;
+        protected global::System.Web.UI.WebControls.ImageButton cartButton;
         
         /// <summary>
         /// ContentPlaceHolder1 control.
