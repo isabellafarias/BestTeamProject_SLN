@@ -28,5 +28,10 @@ namespace BestTeamProject
         {
             Server.Transfer("Homepage.aspx", true);
         }
+
+        protected void searchButton_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("searchResultsPage.aspx", true);
+        }
     }
 }
