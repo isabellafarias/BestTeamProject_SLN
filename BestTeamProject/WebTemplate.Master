@@ -47,7 +47,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="searchTextBox" runat="server" Height="42px" style="font-family: 'Tw Cen MT'" Width="546px"></asp:TextBox>
                     &nbsp; <span class="auto-style3">Search By:</span>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Height="46px" style="font-family: 'Tw Cen MT'; font-weight: 700; font-size: large;" ForeColor="#333333">
+                    <asp:DropDownList ID="DropDownList1" runat="server" Height="46px" style="font-family: 'Tw Cen MT'; font-weight: 700; font-size: large; text-align: center;" ForeColor="#333333">
                         <asp:ListItem>Product ID</asp:ListItem>
                         <asp:ListItem Selected="True">Product Name</asp:ListItem>
                         <asp:ListItem>Product Description</asp:ListItem>
@@ -62,7 +62,7 @@
             </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-        </div>
+        </div>   
     </form>
     <footer>
         <div style="height: 72px; background-color: #333333; color:white" class="auto-style4">

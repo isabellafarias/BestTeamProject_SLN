@@ -22,12 +22,17 @@ namespace BestTeamProject
                     TableCell author = new TableCell();
                     TableCell price = new TableCell();
                     TableCell qty = new TableCell();
-                    TableCell addButtonCell = new TableCell();              
+                    TableCell addButtonCell = new TableCell();
 
-                    title.Text = "Harry Potter and the Order of the Phoenix";
+                    HyperLink titleLink = new HyperLink();
+                    titleLink.Text = "Harry Potter and the Order of the Phoenix";
+                    titleLink.NavigateUrl = "productPage.aspx";
+                    title.Controls.Add(titleLink);
+
                     author.Text = "J.K. Rowling";
                     price.Text = "$20.00";
                     qty.Text = "4";
+
                     Button addButton = new Button();
                     addButton.Text = "Add to Cart";
                     addButtonCell.Controls.Add(addButton);
