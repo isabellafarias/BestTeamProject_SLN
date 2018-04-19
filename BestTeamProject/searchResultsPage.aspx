@@ -1,90 +1,34 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebTemplate.Master" AutoEventWireup="true" CodeBehind="searchResultsPage.aspx.cs" Inherits="BestTeamProject.searchResultsPage" %>
+﻿<%@ Page Title="Results" Language="C#" MasterPageFile="~/WebTemplate.Master" AutoEventWireup="true" CodeBehind="searchResultsPage.aspx.cs" Inherits="BestTeamProject.searchResultsPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        *{font-family:Tw Cen MT; color:#333333}
+        *{font-family:Tw Cen MT; color:#333333; font-size:xx-large}
         .auto-style3 {
             width: 221px;
         font-size: medium;
     }
         .auto-style5 {
-            width: 212px;
-        }
-        .auto-style6 {
-            width: 167px;
-        }
-        .auto-style7 {
-            width: 110px;
-        }
-        .auto-style8 {
-            width: 129px;
-        }
-        .auto-style9 {
-            width: 206px;
-        }
-        .auto-style10 {
-            width: 92%;
-        font-family: "Tw Cen MT";
-        font-size: medium;
+            text-align: left;
     }
-        .auto-style11 {
-            width: 221px;
-            height: 23px;
-        }
-        .auto-style12 {
-            width: 110px;
-            height: 23px;
-        }
-        .auto-style13 {
-            width: 129px;
-            height: 23px;
-        }
-        .auto-style14 {
-            width: 212px;
-            height: 23px;
-        }
-        .auto-style15 {
-            width: 167px;
-            height: 23px;
-        }
-        .auto-style16 {
-            width: 206px;
-            height: 23px;
-        }
-    .auto-style17 {
-        width: 221px;
-    }
+        a:hover{
+                     color: #1D99D4;
+                 }
+        a{
+                    text-decoration: none;
+            }
+       
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 style="font-family: 'Tw Cen MT'">Search Results:</h1>
-    <table id="searchTable" class="auto-style10" style="font-family:Tw Cen MT; font-size:medium; color:#333333">
-        <tr>
-            <td class="auto-style17">Product</td>
-            <td class="auto-style7">Price</td>
-            <td class="auto-style8">Reviews</td>
-            <td class="auto-style5">Quantity Available</td>
-            <td class="auto-style6">Description</td>
-            <td class="auto-style9">Add to Cart</td>
-        </tr>
-        <tr>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style7">&nbsp;</td>
-            <td class="auto-style8">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style6">&nbsp;</td>
-            <td class="auto-style9">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style11"></td>
-            <td class="auto-style12"></td>
-            <td class="auto-style13"></td>
-            <td class="auto-style14"></td>
-            <td class="auto-style15"></td>
-            <td class="auto-style16">&nbsp;</td>
-        </tr>
-    </table>
+    <h1 style="font-family: 'Tw Cen MT'" class="auto-style5">Search Results:</h1>
     <br />
-    <asp:Table ID="Table1" runat="server">
+    <asp:Table ID="resultsTable" runat="server" Width=100% color="#333333" font-size="xx-large">
+        <asp:TableRow runat="server" ID="tableHeader" TableSection="TableHeader" Font-Bold="true">
+            <asp:TableCell runat="server">Title</asp:TableCell>
+            <asp:TableCell runat="server">Author</asp:TableCell>
+            <asp:TableCell runat="server">Price</asp:TableCell>
+            <asp:TableCell runat="server">Quantity Available</asp:TableCell>
+            <asp:TableCell runat="server"></asp:TableCell>
+        </asp:TableRow>
         <asp:TableRow runat="server">
         </asp:TableRow>
     </asp:Table>

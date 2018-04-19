@@ -13,12 +13,21 @@ namespace BestTeamProject {
     public partial class searchResultsPage {
         
         /// <summary>
-        /// Table1 control.
+        /// resultsTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table Table1;
+        protected global::System.Web.UI.WebControls.Table resultsTable;
+        
+        /// <summary>
+        /// tableHeader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow tableHeader;
     }
 }

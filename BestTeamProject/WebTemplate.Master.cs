@@ -34,7 +34,7 @@ namespace BestTeamProject
 
         protected void cartButton_Click(object sender, ImageClickEventArgs e)
         {
-            Server.Transfer("shoppingCart.aspx", true);
+            Server.Transfer("shoppingCart.aspx", true);         
         }
 
         protected void ProfileButton_Click(object sender, ImageClickEventArgs e)
@@ -50,6 +50,20 @@ namespace BestTeamProject
         protected void searchButton_Click(object sender, EventArgs e)
         {
             Server.Transfer("searchResultsPage.aspx", true);
+            
+        }
+
+        //Method to gain access to search content from child pages
+        public string SearchResults
+        {
+            get
+            {
+                return searchTextBox.Text;
+            }
+            set
+            {
+                searchTextBox.Text = value;
+            }
         }
     }
 }
