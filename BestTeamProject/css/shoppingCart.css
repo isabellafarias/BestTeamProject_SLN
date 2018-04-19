@@ -3,12 +3,14 @@
 
 .bookImg{
     float: left;
+    height: 80px;
+    width: 80px;
     
 }
 
 .itemLabel {
     float: left;
-    margin-left: 3%;
+    margin: 0 0 0 3%;
 
     width: 85%;
     font-size: 2em;
@@ -24,22 +26,32 @@
 .priceLabel {
     float: left;
     font-size: 1.5em;
-    margin-left: 3%;
+    margin: 0 0 0 3%;
     width: 87%;
     color: #656565;
 }
 
-.quantity {
+.midBar {
+    width: 2%;
+    float: left;
+    margin: 0;
+}
 
-    margin-top: 1%;
+.quantity {
+    float: left;
+    margin: 0;
 }
 
 .quantityLabel {
-    margin-left: 2%;
+    float: left;
+    margin: 0;
+    width: 7%;
 }
 
 .remove {
-    margin-right: 2%;
+    margin: 0 2% 0 0;
+    width: 3%;
+    float: left;
 }
 
 .shoppingCartButton {
@@ -70,8 +82,12 @@
     font-weight: 700;
 }
 
-.topRow {
+#dynamicCart {
+    height: auto;
+    overflow-y: auto;
+}
 
+.topRow {
 }
 
 #topRowID {

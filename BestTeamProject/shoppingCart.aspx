@@ -3,6 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         *{font-family:Tw Cen MT; color:#333333}
+        body {
+}
+
+
+
+
         </style>
 
 </asp:Content>
@@ -54,7 +60,16 @@
         </div>
 
     </div>
-    <div class="shoppingItem" style="height: 84px;font-family:Tw Cen MT; color:#333333">
+
+    <div id="dynamicCart">
+        <asp:Label ID="lblOutput" runat="server" Text="Label"></asp:Label>
+    </div>
+    <br />
+    <br />
+    <br />
+
+
+    <%--<div class="shoppingItem" style="height: 84px;font-family:Tw Cen MT; color:#333333">
         <asp:Image ID="Image1" class="bookImg" runat="server" Height="83px" ImageUrl="~/Photos/book.png" Width="84px" />
         <asp:Label ID="Label1" class="itemLabel" runat="server" Text="Book 1: Test Book (#28812)"></asp:Label>
         <br />
@@ -66,6 +81,7 @@
             <asp:TextBox ID="TextBox1" runat="server" class="quantity" value="1"></asp:TextBox>
         </div>
     </div>
+
      <div class="shoppingItem" style="height: 84px;font-family:Tw Cen MT; color:#333333">
         <asp:Image ID="Image2" class="bookImg" runat="server" Height="83px" ImageUrl="~/Photos/book.png" Width="84px" />
         <asp:Label ID="Label4" class="itemLabel" runat="server" Text="Book 2: Sequel to the Test (#93415)"></asp:Label>
@@ -98,7 +114,7 @@
             <asp:Label class="quantityLabel"  runat="server" Text="Quantity: "></asp:Label>
             <asp:TextBox ID="TextBox4" runat="server" class="quantity" value="1"></asp:TextBox>
         </div>
-    </div>
+    </div>--%>
 
     
     
