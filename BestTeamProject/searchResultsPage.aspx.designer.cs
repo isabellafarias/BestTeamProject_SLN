@@ -13,6 +13,15 @@ namespace BestTeamProject {
     public partial class searchResultsPage {
         
         /// <summary>
+        /// testLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label testLbl;
+        
+        /// <summary>
         /// resultsTable control.
         /// </summary>
         /// <remarks>
@@ -29,5 +38,17 @@ namespace BestTeamProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TableRow tableHeader;
+        
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new BestTeamProject.WebTemplate Master {
+            get {
+                return ((BestTeamProject.WebTemplate)(base.Master));
+            }
+        }
     }
 }

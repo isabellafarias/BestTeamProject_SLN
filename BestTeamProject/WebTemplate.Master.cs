@@ -28,7 +28,6 @@ namespace BestTeamProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
           
         }
 
@@ -47,8 +46,19 @@ namespace BestTeamProject
             Server.Transfer("Homepage.aspx", true);
         }
 
+        public string searchVal = "";
+        public string searchByVal = "";
+
+
+
         protected void searchButton_Click(object sender, EventArgs e)
         {
+            searchVal = searchTextBox.Text;
+            searchByVal = DropDownList1.SelectedValue;
+
+            Session["SearchValue"] = searchTextBox.Text;
+            Session["SearchByValue"] = DropDownList1.SelectedValue;
+
             Server.Transfer("searchResultsPage.aspx", true);
             
         }
@@ -58,11 +68,11 @@ namespace BestTeamProject
         {
             get
             {
-                return searchTextBox.Text;
+                return searchVal;
             }
             set
             {
-                searchTextBox.Text = value;
+                searchVal = value;
             }
         }
     }

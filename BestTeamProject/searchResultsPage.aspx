@@ -1,4 +1,7 @@
 ﻿<%@ Page Title="Results" Language="C#" MasterPageFile="~/WebTemplate.Master" AutoEventWireup="true" CodeBehind="searchResultsPage.aspx.cs" Inherits="BestTeamProject.searchResultsPage" %>
+<%@ MasterType  virtualPath="~/WebTemplate.master"%>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         *{font-family:Tw Cen MT; color:#333333; font-size:xx-large}
@@ -19,10 +22,12 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 style="font-family: 'Tw Cen MT'" class="auto-style5">Search Results:</h1>
+    <h1 style="font-family: 'Tw Cen MT'" class="auto-style5">Search Results:<asp:Label ID="testLbl" runat="server" Text="Label"></asp:Label>
+    </h1>
     <br />
-    <asp:Table ID="resultsTable" runat="server" Width=100% color="#333333" font-size="xx-large">
+    <asp:Table ID="resultsTable" runat="server" Width=100% color="#333333" font-size="XX-Large">
         <asp:TableRow runat="server" ID="tableHeader" TableSection="TableHeader" Font-Bold="true">
+            <asp:TableCell runat="server">ISBN</asp:TableCell>
             <asp:TableCell runat="server">Title</asp:TableCell>
             <asp:TableCell runat="server">Author</asp:TableCell>
             <asp:TableCell runat="server">Price</asp:TableCell>
@@ -32,5 +37,6 @@
         <asp:TableRow runat="server">
         </asp:TableRow>
     </asp:Table>
-    <br />
+    <br>
+    <br>
 </asp:Content>

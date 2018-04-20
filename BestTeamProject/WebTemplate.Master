@@ -45,12 +45,12 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:ImageButton ID="speedReadLogo" runat="server" Height="150px" ImageUrl="~/Photos/logo.png" OnClick="speedReadLogo_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="searchTextBox" runat="server" Height="42px" style="font-family: 'Tw Cen MT'" Width="546px"></asp:TextBox>
+                    <asp:TextBox ID="searchTextBox" runat="server" Height="42px" style="font-family: 'Tw Cen MT'; font-size: large;" Width="546px"></asp:TextBox>
                     &nbsp; <span class="auto-style3">Search By:</span>
                     <asp:DropDownList ID="DropDownList1" runat="server" Height="46px" style="font-family: 'Tw Cen MT'; font-weight: 700; font-size: large; text-align: center;" ForeColor="#333333">
-                        <asp:ListItem>Product ID</asp:ListItem>
-                        <asp:ListItem Selected="True">Product Name</asp:ListItem>
-                        <asp:ListItem>Product Description</asp:ListItem>
+                        <asp:ListItem>ISBN</asp:ListItem>
+                        <asp:ListItem Selected="True">Title</asp:ListItem>
+                        <asp:ListItem>Author</asp:ListItem>
                     </asp:DropDownList>
 &nbsp;
                     <asp:Button ID="searchButton" runat="server" Height="46px" Text="Search" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700; color: #333333; font-size: large;" BackColor="White" OnClick="searchButton_Click" />
