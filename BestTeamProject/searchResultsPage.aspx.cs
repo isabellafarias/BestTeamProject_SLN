@@ -55,7 +55,7 @@ namespace BestTeamProject
 
                     HyperLink titleLink = new HyperLink();
                     titleLink.Text = titleVal;
-                    titleLink.NavigateUrl = "productPage.aspx";
+                    titleLink.NavigateUrl = "productPage.aspx?isbn=" + isbnVal;
                     title.Controls.Add(titleLink);
 
                     isbnCell.Text = isbnVal;

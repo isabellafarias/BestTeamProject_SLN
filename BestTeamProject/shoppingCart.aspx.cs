@@ -21,6 +21,9 @@ namespace BestTeamProject
             var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
             var reader = cmd.ExecuteReader();
             lblOutput.Text = "";
+            lblTable.Text = "";
+            int counter = 100;
+            double cartTotal = 0;
 
 
             while (reader.Read())
@@ -29,27 +32,46 @@ namespace BestTeamProject
                 Image bookImage = new Image();
 
                 bookImage.ImageUrl = "~/Photos/book.png";
-
+                int quantity = 1;
+                double total = Convert.ToDouble(reader["Price"]) * quantity;
                 
                 lblOutput.Text = lblOutput.Text + " " +
                     "<div class='shoppingItem'> " +
                         "<img id='Image1' class='bookImg' src='../Photos/book.png'/>" +
                         "<p class='itemLabel'>" + reader["Title"] + "</p> <br /> <p class='priceLabel'> " + reader["Price"] + "</p>" +
                         "<div class='options'>" +
-                            "<p class='remove'>Remove</p>" +
+                            "<p class='remove' id='remove" + counter.ToString() + "'>Remove</p>" +
                             "<p class='midBar'>|</p>" +
-                            "<p class='quantityLabel'>Quantitiy: </p>" +
-                            "<input class='quantity' type='text' value='1'/>" +
+                            "<p class='quantityLabel' >Quantitiy: </p>" +
+                            "<input class='quantity' type='text' value='1' id='quantity" + counter.ToString() + "' onChange='updateCart(this)'/>" +
                         "<div>" +
                     "</div>" +
                     "</div>" +
                     "</div>";
 
+                lblTable.Text = lblTable.Text + $"" +
+                    $"<tr>" +
+                        $"<td>{reader["Title"]}</td>" +
+                        $"<td id='cartPrice{counter}'>{reader["Price"]}</td>" +
+                        $"<td id='cartQuantity{counter}'>{quantity}</td>" +
+                        $"<td id='cartTotal{counter}'>{total}</td>" +
+                    $"</tr>";
+
+                counter++;
+                cartTotal = cartTotal + total;
 
             }
 
 
+            lblTable.Text = lblTable.Text + $"" +
+                    $"<tr>" +
+                        $"<td>Total</td>" +
+                        $"<td></td>" +
+                        $"<td></td>" +
+                        $"<td id='cartTotal'>{cartTotal}</td>" +
+                    $"</tr>";
 
+            lblTable.Visible = true;
 
 
             reader.Close();

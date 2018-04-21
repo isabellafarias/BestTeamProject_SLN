@@ -146,6 +146,7 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Homepage.aspx" />
+    <Content Include="jsScripts\shoppingCartJs.js" />
     <Content Include="loginAndCreatePage.aspx" />
     <Content Include="Photos\book.png" />
     <Content Include="Photos\home.png" />
