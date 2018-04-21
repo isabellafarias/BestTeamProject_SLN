@@ -11,7 +11,22 @@ namespace BestTeamProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Globals.conn.Open();
 
+            //get information from book that was passed
+            string query = "SELECT * FROM book where ISBN = " + Request.QueryString[0];
+
+            var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
+            var reader = cmd.ExecuteReader();
+
+            reader.Read();
+
+            bookImage.ImageUrl = $"{reader["ImageURL"]}";
+            bookTitleLabel.Text = $"{reader["Title"]}";
+            descriptionLabel.Text = $"{reader["Summary"]}";
+
+            reader.Close();
+            Globals.conn.Close();
         }
     }
 }
