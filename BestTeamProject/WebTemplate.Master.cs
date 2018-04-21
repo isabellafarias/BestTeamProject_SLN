@@ -28,13 +28,12 @@ namespace BestTeamProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
           
         }
 
         protected void cartButton_Click(object sender, ImageClickEventArgs e)
         {
-            Server.Transfer("shoppingCart.aspx", true);
+            Server.Transfer("shoppingCart.aspx", true);         
         }
 
         protected void ProfileButton_Click(object sender, ImageClickEventArgs e)
@@ -47,9 +46,34 @@ namespace BestTeamProject
             Server.Transfer("Homepage.aspx", true);
         }
 
+        public string searchVal = "";
+        public string searchByVal = "";
+
+
+
         protected void searchButton_Click(object sender, EventArgs e)
         {
+            searchVal = searchTextBox.Text;
+            searchByVal = DropDownList1.SelectedValue;
+
+            Session["SearchValue"] = searchTextBox.Text;
+            Session["SearchByValue"] = DropDownList1.SelectedValue;
+
             Server.Transfer("searchResultsPage.aspx", true);
+            
+        }
+
+        //Method to gain access to search content from child pages
+        public string SearchResults
+        {
+            get
+            {
+                return searchVal;
+            }
+            set
+            {
+                searchVal = value;
+            }
         }
     }
 }
