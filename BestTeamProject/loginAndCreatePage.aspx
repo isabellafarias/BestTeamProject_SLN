@@ -95,7 +95,7 @@
         </tr>
         <tr>
             <td class="auto-style1" colspan="2">
-                <asp:Button ID="createAccountButton" runat="server" Text="Create Account" Width="149px" />
+                <asp:Button ID="createAccountButton" runat="server" Text="Create Account" Width="149px" OnClick="createAccountButton_Click" />
             </td>
         </tr>
     </table>

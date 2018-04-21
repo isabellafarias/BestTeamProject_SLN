@@ -36,7 +36,7 @@ namespace BestTeamProject
                 string titleVal = (string)reader["Title"];
                 string authorVal = (string)reader["Author"];
                 string priceVal = $"{reader["Price"]}";
-                string qtyVal = $"{reader["Quantity"]}";
+                string qtyVal = $"{reader["Quantity"]}";       
 
                 string dbSearchVal = (string)reader[searchByValue];
                 dbSearchVal = dbSearchVal.ToUpper();

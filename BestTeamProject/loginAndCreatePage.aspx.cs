@@ -13,5 +13,20 @@ namespace BestTeamProject
         {
 
         }
+
+        protected void createAccountButton_Click(object sender, EventArgs e)
+        {
+            Globals.conn.Open();
+
+            string firstName, lastName, emailAddress, passWord, confirmPassWord;
+
+            firstName = createFirstNameTextBox.Text;
+            lastName = createLastNameTextBox.Text;
+            emailAddress = createEmailAddressTextBox.Text;
+            passWord = createPasswordTextBox.Text;
+            confirmPassWord = createConfirmPasswordTextBox.Text;
+
+
+        }
     }
 }
