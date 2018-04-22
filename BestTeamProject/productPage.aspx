@@ -6,7 +6,7 @@
             font-family:Tw Cen MT;
             }
         .auto-style5 {
-            font-size: 100px;
+            font-size: 80px;
             float: left;
         }
         .auto-style6 {
@@ -17,10 +17,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="auto-style6">
         <asp:Image ID="bookImage" runat="server" height="200px" style="float:left" ImageUrl="~/Photos/book.png"/>
-        <asp:Label ID="bookTitleLabel" runat="server" Height="200px" Text="Book 1" style="margin-left:20PX; " CssClass="auto-style5" Width="829px"></asp:Label>
+        <asp:Label ID="bookTitleLabel" runat="server" Height="200px" Text="Book 1" style="margin-left:20PX; " CssClass="auto-style5" Width="1405px"></asp:Label>
         <p style="clear:both">
             <br />
-            <asp:Label ID="descriptionLabel" runat="server" Text="Label"></asp:Label>
+        </p>
+        <p style="clear:both">
+            <asp:Label ID="descriptionLabel" runat="server" Text="Label" style="font-size: 43px; text-align: center;" Width="100%"></asp:Label>
         </p>
 
     </div>

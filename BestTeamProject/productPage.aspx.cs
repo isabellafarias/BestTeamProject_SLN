@@ -22,7 +22,7 @@ namespace BestTeamProject
             reader.Read();
 
             bookImage.ImageUrl = $"{reader["ImageURL"]}";
-            bookTitleLabel.Text = $"{reader["Title"]}";
+            bookTitleLabel.Text = $"<em>{reader["Title"]}</em> <br> by {reader["Author"]}";
             descriptionLabel.Text = $"{reader["Summary"]}";
 
             reader.Close();

@@ -32,6 +32,10 @@ namespace BestTeamProject
 
             while (reader.Read())
             {
+                Image bookImage = new Image();
+                bookImage.ImageUrl = (string)reader["imageURL"];
+                bookImage.Height = 120;
+
                 string isbnVal = (string)reader["ISBN"];
                 string titleVal = (string)reader["Title"];
                 string authorVal = (string)reader["Author"];
@@ -46,12 +50,16 @@ namespace BestTeamProject
                     isbnList.Add((string)reader["ISBN"]);
 
                     TableRow newRow = new TableRow();
+                    TableCell bookImageCell = new TableCell();
                     TableCell isbnCell = new TableCell();
                     TableCell title = new TableCell();
                     TableCell author = new TableCell();
                     TableCell price = new TableCell();
-                    TableCell qty = new TableCell();
+                    TableCell qty = new TableCell();                    
                     TableCell addButtonCell = new TableCell();
+
+
+                    bookImageCell.Controls.Add(bookImage);
 
                     HyperLink titleLink = new HyperLink();
                     titleLink.Text = titleVal;
@@ -60,7 +68,7 @@ namespace BestTeamProject
 
                     isbnCell.Text = isbnVal;
                     author.Text = authorVal;
-                    price.Text = priceVal;
+                    price.Text = "$" + priceVal;
                     qty.Text = qtyVal;
 
                     Button addButton = new Button();
@@ -80,11 +88,24 @@ namespace BestTeamProject
                         Globals.conn.Close();
 
                         addButton.Visible = false;
+
+                        string query3 = $"update book set Quantity=Quantity-1 where ISBN = \'{isbnVal}\'";
+
+                        MySqlCommand MyCommand3 = new MySqlCommand(query3, Globals.conn);
+                        MySqlDataReader reader3;
+                        Globals.conn.Close();
+                        Globals.conn.Open();
+                        reader3 = MyCommand3.ExecuteReader();
+                        while (reader3.Read())
+                        { }
+                        Globals.conn.Close();
+
                     };
 
                     addButton.Text = "Add to Cart";
                     addButtonCell.Controls.Add(addButton);
 
+                    newRow.Cells.Add(bookImageCell);
                     newRow.Cells.Add(isbnCell);
                     newRow.Cells.Add(title);
                     newRow.Cells.Add(author);
@@ -103,18 +124,7 @@ namespace BestTeamProject
 
         void addButtonClick(object s, EventArgs ea)
         {
-            Button clickedButton = (Button)s;
 
-            testLbl.Text = isbnList[0];
-
-            //need to figure out how to enter current username
-            //Globals.conn.Open();
-            //string insertQuery = $"insert into cart values ({clickedButton.ID}, ifarias)";
-
-            //var cmd2 = new MySql.Data.MySqlClient.MySqlCommand(insertQuery, Globals.conn);
-            //var reader2 = cmd2.ExecuteReader();
-            //reader2.Close();
-            //Globals.conn.Close();
         }
     }
 }

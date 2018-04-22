@@ -63,17 +63,6 @@ namespace BestTeamProject
             
         }
 
-        //Method to gain access to search content from child pages
-        public string SearchResults
-        {
-            get
-            {
-                return searchVal;
-            }
-            set
-            {
-                searchVal = value;
-            }
-        }
+
     }
 }

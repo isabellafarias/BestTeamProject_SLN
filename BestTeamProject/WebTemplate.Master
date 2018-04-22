@@ -32,7 +32,7 @@
         .auto-style4 {
             text-align: center;
             font-family: "Tw Cen MT";
-            font-size: small;
+            font-size: large;
         }
         </style>
 </head>
@@ -65,9 +65,9 @@
         </div>   
     </form>
     <footer>
-        <div style="height: 72px; background-color: #333333; color:white" class="auto-style4">
-            <em style="font-size: medium">Don't see the book you're looking for? Contact us at: service@speedread.com
-        </em>
+        <div style="height: 72px; background-color: #333333; color:white; font-style:italic; text-align:center; font-size:25px" class="auto-style4">
+            <br />
+            Don't see the book you're looking for? Contact us at: service@speedread.com
         </div>
     </footer>
 </body>
