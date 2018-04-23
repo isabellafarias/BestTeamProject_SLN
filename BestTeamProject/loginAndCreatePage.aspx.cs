@@ -1,5 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,12 +14,27 @@ namespace BestTeamProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Globals.conn.Open();
+
+            string query = "SELECT * FROM user;";
+            var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
+            var reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                var userName = reader["username"];
+
+                Label1.Text = userName.ToString();
+            }
+
+
+            Globals.conn.Close();
 
         }
 
         protected void createAccountButton_Click(object sender, EventArgs e)
         {
-            Globals.conn.Open();
+            
 
             string firstName, lastName, emailAddress, passWord, confirmPassWord;
 
@@ -26,7 +44,106 @@ namespace BestTeamProject
             passWord = createPasswordTextBox.Text;
             confirmPassWord = createConfirmPasswordTextBox.Text;
 
+            if(authenticateEmailAddress(emailAddress) == false)
+            {
+                emailValidator.IsValid = false;
+                
+            }
 
+            if(passWord != confirmPassWord)
+            {
+                passwordValidator.IsValid = false;
+            }
+
+
+            if (Page.IsValid)
+            {
+                Globals.conn.Open();
+                string addUserQuery = $"Insert into user (Username, Password, FirstName, LastName)" +
+                    $"values (\"{emailAddress}\",\"{passWord}\", \"{firstName}\", \"{lastName}\");";
+
+                var cmd = new MySql.Data.MySqlClient.MySqlCommand(addUserQuery, Globals.conn);
+
+                cmd.ExecuteNonQuery();
+
+                Globals.conn.Close();
+
+
+            }
+
+            createFirstNameTextBox.Text = "";
+            createLastNameTextBox.Text = "";
+            createEmailAddressTextBox.Text = "";
+            createPasswordTextBox.Text = "";
+            createConfirmPasswordTextBox.Text = "";
+
+        }
+
+        private bool authenticateEmailAddress(string emailAddress)
+        {
+            Globals.conn.Open();
+
+            string query = "SELECT * FROM user;";
+            var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
+            var reader = cmd.ExecuteReader();
+
+            
+            List<string> userNameList = new List<string>();
+
+            while (reader.Read())
+            {
+                var userName = reader["Username"];
+                userNameList.Add(userName.ToString());
+            }
+
+            Globals.conn.Close();
+
+            if (userNameList.Contains(emailAddress))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        protected void loginButton_Click(object sender, EventArgs e)
+        {
+            string userName, passWord;
+
+            userName = loginEmailAddressTextBox.Text;
+            passWord = loginPasswordTextBox.Text;
+
+            if(authenticateUserNameAndPassword(userName, passWord))
+            {
+                loginValidator.IsValid = true;
+            }
+            else
+            {
+                loginValidator.IsValid = false;
+            }
+        }
+
+        private bool authenticateUserNameAndPassword(string userName, string password)
+        {
+            Globals.conn.Open();
+
+            string query = "SELECT * FROM USER";
+
+            var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
+            var reader = cmd.ExecuteReader();
+
+            while(reader.Read())
+            {
+                if(userName == reader["Username"].ToString() && password == reader["Password"].ToString())
+                {
+                    Globals.conn.Close();
+                    return true;                    
+                }
+            }
+
+            return false;
         }
     }
 }
