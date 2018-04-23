@@ -32,9 +32,9 @@
 }
 
 .midBar {
-    width: 2%;
+    width: 1%;
     float: left;
-    margin: 0;
+    margin: 0 2%;
 }
 
 .quantity {
