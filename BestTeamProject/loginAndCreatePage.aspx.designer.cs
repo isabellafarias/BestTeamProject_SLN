@@ -22,15 +22,6 @@ namespace BestTeamProject {
         protected global::System.Web.UI.WebControls.TextBox createFirstNameTextBox;
         
         /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
         /// loginEmailAddressTextBox control.
         /// </summary>
         /// <remarks>
@@ -85,15 +76,6 @@ namespace BestTeamProject {
         protected global::System.Web.UI.WebControls.Button loginButton;
         
         /// <summary>
-        /// loginValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator loginValidator;
-        
-        /// <summary>
         /// createPasswordTextBox control.
         /// </summary>
         /// <remarks>
@@ -101,6 +83,15 @@ namespace BestTeamProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox createPasswordTextBox;
+        
+        /// <summary>
+        /// loginValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator loginValidator;
         
         /// <summary>
         /// createConfirmPasswordTextBox control.

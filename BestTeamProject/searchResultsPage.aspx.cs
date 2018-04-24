@@ -100,16 +100,16 @@ namespace BestTeamProject
 
                                 addButton.Visible = false;
 
-                                string query3 = $"update book set Quantity=Quantity-1 where ISBN = \'{isbnVal}\'";
+                                //string query3 = $"update book set Quantity=Quantity-1 where ISBN = \'{isbnVal}\'";
 
-                                MySqlCommand MyCommand3 = new MySqlCommand(query3, Globals.conn);
-                                MySqlDataReader reader3;
-                                Globals.conn.Close();
-                                Globals.conn.Open();
-                                reader3 = MyCommand3.ExecuteReader();
-                                while (reader3.Read())
-                                { }
-                                Globals.conn.Close();
+                                //MySqlCommand MyCommand3 = new MySqlCommand(query3, Globals.conn);
+                                //MySqlDataReader reader3;
+                                //Globals.conn.Close();
+                                //Globals.conn.Open();
+                                //reader3 = MyCommand3.ExecuteReader();
+                                //while (reader3.Read())
+                                //{ }
+                                //Globals.conn.Close();
                             }
                             else
                             {

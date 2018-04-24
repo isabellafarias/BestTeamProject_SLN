@@ -13,7 +13,7 @@ namespace BestTeamProject
     
     public partial class loginAndCreatePage : System.Web.UI.Page
     {
-        
+        protected bool loggedIn;
         
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -108,8 +108,10 @@ namespace BestTeamProject
             {
                 loginValidator.IsValid = true;
                 Session["userName"] = userName;
-                WebTemplate tmpVar = new WebTemplate();
-                tmpVar.loggedIn = true;
+                loggedIn = true;
+                Session["loggedIn"] = loggedIn.ToString();
+                Server.Transfer("profilePage.aspx", true);
+
             }
             else
             {
