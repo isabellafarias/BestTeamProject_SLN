@@ -116,7 +116,7 @@ namespace BestTeamProject
             {
                 loginValidator.IsValid = true;
                 Session["userName"] = userName;
-                Server.Transfer("profilePage.aspx", true);
+                Response.Redirect("profilePage.aspx", true);
 
             }
             else

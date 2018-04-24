@@ -157,7 +157,7 @@ namespace BestTeamProject
         protected void Button2_Click(object sender, EventArgs e)
         {
            
-            Server.Transfer("HomePage.aspx", true);
+            Response.Redirect("HomePage.aspx", true);
         }
 
         protected void Button3_Click(object sender, EventArgs e)
@@ -174,8 +174,8 @@ namespace BestTeamProject
                 reader.Close();
                 Globals.conn.Close();
 
-                
-                Server.Transfer("HomePage.aspx", true);
+
+                Response.Redirect("HomePage.aspx", true);
             }
         }
 

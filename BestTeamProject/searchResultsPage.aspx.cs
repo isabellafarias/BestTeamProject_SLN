@@ -113,7 +113,7 @@ namespace BestTeamProject
                             }
                             else
                             {
-                                Server.Transfer("loginAndCreatePage.aspx", true);
+                                Response.Redirect("loginAndCreatePage.aspx", true);
                             }
                         };
 

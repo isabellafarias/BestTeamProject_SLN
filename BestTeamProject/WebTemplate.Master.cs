@@ -34,26 +34,26 @@ namespace BestTeamProject
 
         protected void cartButton_Click(object sender, ImageClickEventArgs e)
         {
-            Server.Transfer("shoppingCart.aspx", true);         
+            Response.Redirect("shoppingCart.aspx", true);         
         }
 
         protected void ProfileButton_Click(object sender, ImageClickEventArgs e)
         {
             if (System.Web.HttpContext.Current.Session["userName"] != null)
             {
-                Server.Transfer("profilePage.aspx", true);
+                Response.Redirect("profilePage.aspx", true);
             }
             else
             {
-                
-                Server.Transfer("loginAndCreatePage.aspx", true);
+
+                Response.Redirect("loginAndCreatePage.aspx", true);
                 
             }
         }
 
         protected void speedReadLogo_Click(object sender, ImageClickEventArgs e)
         {
-            Server.Transfer("Homepage.aspx", true);
+           Response.Redirect("Homepage.aspx", true);
         }
 
         public string searchVal = "";
@@ -75,8 +75,8 @@ namespace BestTeamProject
 
             }
             else
-            { 
-            Server.Transfer("searchResultsPage.aspx", true);
+            {
+                Response.Redirect("searchResultsPage.aspx", true);
             }
         }
 
