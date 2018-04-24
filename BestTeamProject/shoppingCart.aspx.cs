@@ -14,7 +14,7 @@ namespace BestTeamProject
         protected void Page_Load(object sender, EventArgs e)
         {
             //Session["userName"] = "joe@gmail.com";
-        
+
 
             if (System.Web.HttpContext.Current.Session["userName"] != null)
             {
@@ -47,6 +47,9 @@ namespace BestTeamProject
                     btnContinue.Visible = true;
                     btnPurchase.Visible = true;
 
+
+                    lblOutput.Text = "<form method='get'>";
+
                     while (reader.Read())
                     {
 
@@ -66,7 +69,7 @@ namespace BestTeamProject
                                     "<p class='remove' id='remove" + counter.ToString() + "'>Remove</p>" +
                                     "<p class='midBar'>|</p>" +
                                     "<p class='quantityLabel' >Quantitiy: </p>" +
-                                    "<input class='quantity' type='text' value='1' id='quantity" + counter.ToString() + "' onChange='updateCart(this)'/>" +
+                                    "<input class='quantity' type='text' value='1' name='book" + counter.ToString() + "' id='quantity" + counter.ToString() + "' onChange='updateCart(this)'/>" +
                                 "<div>" +
                             "</div>" +
                             "</div>" +
@@ -83,9 +86,11 @@ namespace BestTeamProject
                         counter++;
                         cartTotal = cartTotal + total;
                     }
-                    
 
-                
+                    lblOutput.Text = lblOutput.Text + "</form>";
+
+
+
 
 
                     lblTable.Text = lblTable.Text + $"" +
@@ -103,6 +108,10 @@ namespace BestTeamProject
                     btnClear.Visible = false;
                     btnContinue.Visible = false;
                     btnPurchase.Visible = false;
+
+
+
+                    
                 }
                 reader.Close();
                 Globals.conn.Close();
@@ -120,9 +129,8 @@ namespace BestTeamProject
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Session["SearchValue"] = "a";
-            Session["SearchByValue"] = "Title";
-            Server.Transfer("searchResultsPage.aspx", true);
+           
+            Server.Transfer("HomePage.aspx", true);
         }
 
         protected void Button3_Click(object sender, EventArgs e)
@@ -139,11 +147,68 @@ namespace BestTeamProject
                 reader.Close();
                 Globals.conn.Close();
 
-
-                Session["SearchValue"] = "a";
-                Session["SearchByValue"] = "Title";
-                Server.Transfer("searchResultsPage.aspx", true);
+                
+                Server.Transfer("HomePage.aspx", true);
             }
+        }
+
+        protected void btnPurchase_Click(object sender, EventArgs e)
+        {
+
+            List<string> ISBNs = new List<string>();
+            List<int> quantities = new List<int>();
+            int quantitiesCounter = 0;
+
+            string user = Session["userName"].ToString();
+            Globals.conn.Open();
+
+            string query = $"SELECT ct.ISBN, Title, Price, Quantity, ImageURL FROM cart ct, book bk where ct.ISBN = bk.ISBN AND Username = '{user}'";
+
+            var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
+            var reader = cmd.ExecuteReader();
+
+           
+            while (reader.Read())
+            {
+
+
+                string ISBN = reader["ISBN"].ToString();
+                int quantity = (int) reader["Quantity"];
+
+                ISBNs.Add(ISBN);
+                quantities.Add(quantity);
+
+            }
+
+            reader.Close();
+
+            foreach (string isbn in ISBNs)
+            {
+                string localIsbn = isbn;
+
+                string remove = $"update book set Quantity = {quantities[quantitiesCounter] - 1} where ISBN = {localIsbn}";
+                var removeCmd = new MySql.Data.MySqlClient.MySqlCommand(remove, Globals.conn);
+
+                var removeReader = removeCmd.ExecuteReader();
+                removeReader.Close();
+                quantitiesCounter++;
+            }
+
+           
+
+            string deleteQuery = $"Delete from cart where Username = '{user}'";
+
+            var deleteCmd = new MySql.Data.MySqlClient.MySqlCommand(deleteQuery, Globals.conn);
+            var deleteReader = deleteCmd.ExecuteReader();
+            deleteReader.Close();
+
+
+           
+            
+            Globals.conn.Close();
+
+
+            Server.Transfer("HomePage.aspx", true);
         }
     }
   }
