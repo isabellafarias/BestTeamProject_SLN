@@ -118,6 +118,7 @@ namespace BestTeamProject
             if(authenticateUserNameAndPassword(userName, passWord))
             {
                 loginValidator.IsValid = true;
+                Session["userName"] = userName;
             }
             else
             {
