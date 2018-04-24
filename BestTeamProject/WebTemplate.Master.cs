@@ -29,7 +29,7 @@ namespace BestTeamProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["loggedIn"] = "False";
+            
         }
 
         protected void cartButton_Click(object sender, ImageClickEventArgs e)

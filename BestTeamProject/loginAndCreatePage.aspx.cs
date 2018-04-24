@@ -13,12 +13,11 @@ namespace BestTeamProject
     
     public partial class loginAndCreatePage : System.Web.UI.Page
     {
-        protected bool loggedIn;
+        
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-
+             
         }
 
         protected void createAccountButton_Click(object sender, EventArgs e)
@@ -44,35 +43,38 @@ namespace BestTeamProject
                 passwordValidator.IsValid = false;
             }
 
+            
+                if (Page.IsValid)
+                {
+                    Globals.conn.Open();
+                    string addUserQuery = $"Insert into user (Username, Password, FirstName, LastName)" +
+                        $"values (\"{emailAddress}\",\"{passWord}\", \"{firstName}\", \"{lastName}\");";
 
-            if (Page.IsValid)
-            {
-                Globals.conn.Open();
-                string addUserQuery = $"Insert into user (Username, Password, FirstName, LastName)" +
-                    $"values (\"{emailAddress}\",\"{passWord}\", \"{firstName}\", \"{lastName}\");";
+                    var cmd = new MySql.Data.MySqlClient.MySqlCommand(addUserQuery, Globals.conn);
 
-                var cmd = new MySql.Data.MySqlClient.MySqlCommand(addUserQuery, Globals.conn);
+                    cmd.ExecuteNonQuery();
 
-                cmd.ExecuteNonQuery();
+                    Globals.conn.Close();
 
-                Globals.conn.Close();
-
-                createFirstNameTextBox.Text = "";
-                createLastNameTextBox.Text = "";
-                createEmailAddressTextBox.Text = "";
-                createPasswordTextBox.Text = "";
-                createConfirmPasswordTextBox.Text = "";
-                creditCardTextBox.Text = "";
-                cvvTextBox.Text = "";
-                typeDropDown.SelectedIndex = 0;
-                birthDateTextBox.Text = "";
+                    createFirstNameTextBox.Text = "";
+                    createLastNameTextBox.Text = "";
+                    createEmailAddressTextBox.Text = "";
+                    createPasswordTextBox.Text = "";
+                    createConfirmPasswordTextBox.Text = "";
+                    creditCardTextBox.Text = "";
+                    cvvTextBox.Text = "";
+                    typeDropDown.SelectedIndex = 0;
+                    birthDateTextBox.Text = "";
 
 
-            }
-
+                }
+            
+            
             
 
+
         }
+
 
         private bool authenticateEmailAddress(string emailAddress)
         {
@@ -114,8 +116,6 @@ namespace BestTeamProject
             {
                 loginValidator.IsValid = true;
                 Session["userName"] = userName;
-                loggedIn = true;
-                Session["loggedIn"] = loggedIn.ToString();
                 Server.Transfer("profilePage.aspx", true);
 
             }
@@ -142,9 +142,9 @@ namespace BestTeamProject
                     return true;                    
                 }
             }
-
-            return false;
             Globals.conn.Close();
+            return false;
+            
         }
     }
 }
