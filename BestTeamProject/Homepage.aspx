@@ -6,7 +6,7 @@
             font-family:Tw Cen MT
         }
         .auto-style5 {
-            text-align: center;
+            text-align: justify;
             font-family: "Tw Cen MT";
             font-size: xx-large;
             padding-left: 100px;
