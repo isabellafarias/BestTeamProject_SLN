@@ -13,15 +13,6 @@ namespace BestTeamProject {
     public partial class searchResultsPage {
         
         /// <summary>
-        /// testingLbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label testingLbl;
-        
-        /// <summary>
         /// resultsTable control.
         /// </summary>
         /// <remarks>
