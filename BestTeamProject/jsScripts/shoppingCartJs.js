@@ -1,15 +1,15 @@
-﻿let updateCart = (inputObject) => {
-    let id = inputObject.id;
-    let idNumber = id.substr(id.length - 3);
+﻿var updateCart = function(inputObject){
+    var id = inputObject.id;
+    var idNumber = id.substr(id.length - 3);
 
-    let cartTotal = document.getElementById(`cartTotal${idNumber}`);
-    let cartQuantity = document.getElementById(`cartQuantity${idNumber}`);
-    let cartPrice = document.getElementById(`cartPrice${idNumber}`);
-    let grandTotal = document.getElementById('cartTotal');
-    let grandTotalValue = Number(grandTotal.innerHTML);
+    var cartTotal = document.getElementById(`cartTotal${idNumber}`);
+    var cartQuantity = document.getElementById(`cartQuantity${idNumber}`);
+    var cartPrice = document.getElementById(`cartPrice${idNumber}`);
+    var grandTotal = document.getElementById('cartTotal');
+    var grandTotalValue = Number(grandTotal.innerHTML);
 
-    let newTotal = inputObject.value * cartPrice.innerHTML;
-    let oldTotal = Number(cartTotal.innerHTML);
+    var newTotal = inputObject.value * cartPrice.innerHTML;
+    var oldTotal = Number(cartTotal.innerHTML);
 
    
     grandTotalValue = grandTotalValue + (newTotal - oldTotal);
