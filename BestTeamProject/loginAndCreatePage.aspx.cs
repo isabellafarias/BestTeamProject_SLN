@@ -14,21 +14,7 @@ namespace BestTeamProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Globals.conn.Open();
-
-            string query = "SELECT * FROM user;";
-            var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
-            var reader = cmd.ExecuteReader();
-
-            while (reader.Read())
-            {
-                var userName = reader["username"];
-
-                Label1.Text = userName.ToString();
-            }
-
-
-            Globals.conn.Close();
+            
 
         }
 

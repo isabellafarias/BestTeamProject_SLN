@@ -12,9 +12,6 @@
             text-align: center;
             width: 382px;
         }
-        .auto-style7 {
-            width: 382px;
-        }
         .auto-style8 {
             text-align: center;
             width: 382px;
@@ -41,6 +38,9 @@
             <td class="auto-style5">&nbsp;</td>
             <td class="auto-style8">
                 <asp:Label ID="nameLabel" runat="server" Text="You must login"></asp:Label>
+                <br />
+                <asp:TextBox ID="updateFirstNameTextBox" runat="server" Visible="False"></asp:TextBox>
+                <asp:TextBox ID="updateLastNameTextBox" runat="server" Visible="False"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -48,12 +48,17 @@
             <td class="auto-style5">&nbsp;</td>
             <td class="auto-style8">
                 <asp:Label ID="emailLabel" runat="server" Text="to view the profile page."></asp:Label>
+                <br />
+                <asp:TextBox ID="updateEmailTextBox" runat="server" Visible="False" Width="154px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style7">&nbsp;</td>
+            <td class="auto-style6">
+                <asp:Button ID="initialUpdateButton" runat="server" OnClick="initialUpdateButton_Click" Text="Update Profile Information" Width="153px" />
+                <asp:Button ID="updateButton" runat="server" OnClick="updateButton_Click" Text="Update" Visible="False" />
+            </td>
             <td>&nbsp;</td>
         </tr>
     </table>

@@ -31,6 +31,24 @@ namespace BestTeamProject {
         protected global::System.Web.UI.WebControls.Label nameLabel;
         
         /// <summary>
+        /// updateFirstNameTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox updateFirstNameTextBox;
+        
+        /// <summary>
+        /// updateLastNameTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox updateLastNameTextBox;
+        
+        /// <summary>
         /// emailLabel control.
         /// </summary>
         /// <remarks>
@@ -38,5 +56,32 @@ namespace BestTeamProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label emailLabel;
+        
+        /// <summary>
+        /// updateEmailTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox updateEmailTextBox;
+        
+        /// <summary>
+        /// initialUpdateButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button initialUpdateButton;
+        
+        /// <summary>
+        /// updateButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button updateButton;
     }
 }
