@@ -144,6 +144,7 @@ namespace BestTeamProject
             }
 
             return false;
+            Globals.conn.Close();
         }
     }
 }
