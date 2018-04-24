@@ -35,6 +35,7 @@
     </div>
 
     <div id="dynamicCart">
+        <asp:Label ID="lblName" runat="server" Text="Label"></asp:Label> <br /> <br />
         <asp:Label ID="lblOutput" runat="server" Text="Label"></asp:Label>
     </div>
     <br />
