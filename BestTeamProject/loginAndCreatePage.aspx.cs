@@ -65,6 +65,10 @@ namespace BestTeamProject
             createEmailAddressTextBox.Text = "";
             createPasswordTextBox.Text = "";
             createConfirmPasswordTextBox.Text = "";
+            creditCardTextBox.Text = "";
+            cvvTextBox.Text = "";
+            typeDropDown.SelectedIndex = 0;
+            birthDateTextBox.Text = "";
 
         }
 

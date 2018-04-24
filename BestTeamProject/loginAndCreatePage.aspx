@@ -150,15 +150,60 @@
                 </td>
         </tr>
         <tr>
+            <td class="auto-style27">Credit Card:</td>
+            <td class="auto-style28">
+                <asp:TextBox ID="creditCardTextBox" runat="server"></asp:TextBox>
+            </td>
+            <td class="auto-style29">
+                &nbsp;</td>
+            <td class="auto-style30" colspan="2">
+                <asp:CustomValidator ID="loginValidator" runat="server" ErrorMessage="Email Address and Password do not match." ForeColor="Red"></asp:CustomValidator>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style27">Type:</td>
+            <td class="auto-style28">
+                <asp:DropDownList ID="typeDropDown" runat="server">
+                    <asp:ListItem Selected="True">Choose One</asp:ListItem>
+                    <asp:ListItem>Visa</asp:ListItem>
+                    <asp:ListItem>MasterCard</asp:ListItem>
+                    <asp:ListItem>American Express</asp:ListItem>
+                    <asp:ListItem>M&amp;G</asp:ListItem>
+                </asp:DropDownList>
+            </td>
+            <td class="auto-style29">
+                &nbsp;</td>
+            <td class="auto-style30" colspan="2">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style27">CVV:</td>
+            <td class="auto-style28">
+                <asp:TextBox ID="cvvTextBox" runat="server"></asp:TextBox>
+            </td>
+            <td class="auto-style29">
+                &nbsp;</td>
+            <td class="auto-style30" colspan="2">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style27">Birth Date (mm/dd/yyy):</td>
+            <td class="auto-style28">
+                <asp:TextBox ID="birthDateTextBox" runat="server"></asp:TextBox>
+            </td>
+            <td class="auto-style29">
+                &nbsp;</td>
+            <td class="auto-style30" colspan="2">
+                &nbsp;</td>
+        </tr>
+        <tr>
             <td class="auto-style31">Password:</td>
             <td class="auto-style32">
                 <asp:TextBox ID="createPasswordTextBox" runat="server" Width="201px" TextMode="Password"></asp:TextBox>
             </td>
             <td class="auto-style33">
                 </td>
-            <td class="auto-style34" colspan="2">
-                <asp:CustomValidator ID="loginValidator" runat="server" ErrorMessage="Email Address and Password do not match." ForeColor="Red"></asp:CustomValidator>
-            </td>
+            <td class="auto-style34" colspan="2">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style11">Confirm Password:</td>

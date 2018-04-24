@@ -76,13 +76,13 @@ namespace BestTeamProject {
         protected global::System.Web.UI.WebControls.Button loginButton;
         
         /// <summary>
-        /// createPasswordTextBox control.
+        /// creditCardTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox createPasswordTextBox;
+        protected global::System.Web.UI.WebControls.TextBox creditCardTextBox;
         
         /// <summary>
         /// loginValidator control.
@@ -92,6 +92,42 @@ namespace BestTeamProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator loginValidator;
+        
+        /// <summary>
+        /// typeDropDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList typeDropDown;
+        
+        /// <summary>
+        /// cvvTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cvvTextBox;
+        
+        /// <summary>
+        /// birthDateTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox birthDateTextBox;
+        
+        /// <summary>
+        /// createPasswordTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox createPasswordTextBox;
         
         /// <summary>
         /// createConfirmPasswordTextBox control.
