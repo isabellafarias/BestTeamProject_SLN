@@ -60,7 +60,6 @@ namespace BestTeamProject
                         TableCell qty = new TableCell();
                         TableCell addButtonCell = new TableCell();
 
-
                         bookImageCell.Controls.Add(bookImage);
 
                         HyperLink titleLink = new HyperLink();
@@ -75,33 +74,47 @@ namespace BestTeamProject
 
                         Button addButton = new Button();
                         addButton.ID = $"{isbnVal}";
-                        addButton.Click += delegate
+
+                        if (qtyVal == "0")
                         {
-                        //NEED TO INPUT USER ID HERE INSTEAD OF MY NAME
-                        string query2 = $"insert into cart values (\"{isbnVal}\",\"ifarias\")";
-
-                            MySqlCommand MyCommand2 = new MySqlCommand(query2, Globals.conn);
-                            MySqlDataReader reader2;
-                            Globals.conn.Close();
-                            Globals.conn.Open();
-                            reader2 = MyCommand2.ExecuteReader();
-                            while (reader2.Read())
-                            { }
-                            Globals.conn.Close();
-
                             addButton.Visible = false;
+                        }
 
-                            string query3 = $"update book set Quantity=Quantity-1 where ISBN = \'{isbnVal}\'";
 
-                            MySqlCommand MyCommand3 = new MySqlCommand(query3, Globals.conn);
-                            MySqlDataReader reader3;
-                            Globals.conn.Close();
-                            Globals.conn.Open();
-                            reader3 = MyCommand3.ExecuteReader();
-                            while (reader3.Read())
-                            { }
-                            Globals.conn.Close();
+                            addButton.Click += delegate
+                        {
+                            if(System.Web.HttpContext.Current.Session["userName"] != null)
+                            { 
+                                string user = (string)Session["userName"];
 
+                                string query2 = $"insert into cart values (\"{isbnVal}\",\"{user}\")";
+
+                                MySqlCommand MyCommand2 = new MySqlCommand(query2, Globals.conn);
+                                MySqlDataReader reader2;
+                                Globals.conn.Close();
+                                Globals.conn.Open();
+                                reader2 = MyCommand2.ExecuteReader();
+                                while (reader2.Read())
+                                { }
+                                Globals.conn.Close();
+
+                                addButton.Visible = false;
+
+                                string query3 = $"update book set Quantity=Quantity-1 where ISBN = \'{isbnVal}\'";
+
+                                MySqlCommand MyCommand3 = new MySqlCommand(query3, Globals.conn);
+                                MySqlDataReader reader3;
+                                Globals.conn.Close();
+                                Globals.conn.Open();
+                                reader3 = MyCommand3.ExecuteReader();
+                                while (reader3.Read())
+                                { }
+                                Globals.conn.Close();
+                            }
+                            else
+                            {
+                                Server.Transfer("loginAndCreatePage.aspx", true);
+                            }
                         };
 
                         addButton.Text = "Add to Cart";
@@ -125,7 +138,7 @@ namespace BestTeamProject
             }
         }
 
-        void addButtonClick(object s, EventArgs ea)
+        public void addButtonClick(object s, EventArgs ea)
         {
 
         }

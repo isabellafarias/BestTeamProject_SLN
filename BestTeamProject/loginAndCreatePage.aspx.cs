@@ -10,8 +10,11 @@ using System.Web.UI.WebControls;
 
 namespace BestTeamProject
 {
+    
     public partial class loginAndCreatePage : System.Web.UI.Page
     {
+        
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -105,6 +108,8 @@ namespace BestTeamProject
             {
                 loginValidator.IsValid = true;
                 Session["userName"] = userName;
+                WebTemplate tmpVar = new WebTemplate();
+                tmpVar.loggedIn = true;
             }
             else
             {
