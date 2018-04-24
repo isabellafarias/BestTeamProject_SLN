@@ -24,12 +24,12 @@ namespace BestTeamProject
     {
 
 
-        public bool loggedIn;
+        
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            Session["loggedIn"] = "False";
         }
 
         protected void cartButton_Click(object sender, ImageClickEventArgs e)
@@ -39,20 +39,15 @@ namespace BestTeamProject
 
         protected void ProfileButton_Click(object sender, ImageClickEventArgs e)
         {
-            if (loggedIn == true)
+            if (System.Web.HttpContext.Current.Session["userName"] != null)
             {
                 Server.Transfer("profilePage.aspx", true);
             }
-            else if(loggedIn == false)
+            else
             {
-                try
-                {
-                    Server.Transfer("loginAndCreatePage.aspx", true);
-                }
-                catch(Exception)
-                {
-
-                }
+                
+                Server.Transfer("loginAndCreatePage.aspx", true);
+                
             }
         }
 
