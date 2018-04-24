@@ -33,10 +33,12 @@
 
         </table>
 
-        <div id="buttons">
+        <div id="buttons" class="auto-style1">
             <asp:Button ID="btnPurchase" runat="server" Text="Purchase" class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White" OnClick="btnPurchase_Click"/> <br />
             <asp:Button ID="btnContinue" runat="server" Text="Continue Shopping"  class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White" OnClick="Button2_Click"/> <br />
             <asp:Button ID="btnClear" runat="server" Text="Clear Cart"  class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White" OnClick="Button3_Click"/> <br />
+            <br />
+            <asp:Label ID="successLabel" runat="server" Text="Thank you for shopping with us!" Visible="False"></asp:Label>
         </div>
 
     </div>

@@ -163,7 +163,7 @@ namespace BestTeamProject
                 Globals.conn.Close();
 
                 
-                Server.Transfer("HomePage.aspx", true);
+                Server.Transfer("shoppingCart.aspx", true);
             }
         }
 
@@ -223,7 +223,7 @@ namespace BestTeamProject
             Globals.conn.Close();
 
 
-            Server.Transfer("HomePage.aspx", true);
+            successLabel.Visible = true;
         }
     }
   }

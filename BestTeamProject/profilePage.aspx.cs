@@ -80,6 +80,11 @@ namespace BestTeamProject
             Globals.conn.Close();
 
             nameLabel.Text = firstName + " " + lastName;
+
+            if(firstName == "Kavous")
+            {
+                profileImage.ImageUrl = "https://wpcarey.asu.edu/sites/default/files/styles/asu_isearch_profile/public/asu_isearch_photos/3025581.jpg?itok=ZcmoXdDA";
+            }
         }
 
         private void updateUserInformation(string emailAddress, string firstName, string lastName)
