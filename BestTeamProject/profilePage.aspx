@@ -29,7 +29,7 @@
                 <br />
             </td>
             <td class="auto-style6">
-                <asp:Image ID="Image1" runat="server" Height="161px" ImageUrl="~/Photos/book.png" Width="175px" CssClass="auto-style9" />
+                <asp:Image ID="profileImage" runat="server" Height="161px" ImageUrl="~/Photos/book.png" Width="175px" CssClass="auto-style9" />
                 <br class="auto-style9" />
                 </td>
             <td>&nbsp;</td>
