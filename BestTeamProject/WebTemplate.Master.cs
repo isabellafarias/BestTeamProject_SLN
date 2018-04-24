@@ -8,6 +8,7 @@ using System.Data;
 
 namespace BestTeamProject
 {
+    
 
     public static class Globals		
     {
@@ -22,13 +23,13 @@ namespace BestTeamProject
     public partial class WebTemplate : System.Web.UI.MasterPage
     {
 
-        
 
+        public bool loggedIn;
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+            
         }
 
         protected void cartButton_Click(object sender, ImageClickEventArgs e)
@@ -38,7 +39,21 @@ namespace BestTeamProject
 
         protected void ProfileButton_Click(object sender, ImageClickEventArgs e)
         {
-            Server.Transfer("profilePage.aspx", true);
+            if (loggedIn == true)
+            {
+                Server.Transfer("profilePage.aspx", true);
+            }
+            else if(loggedIn == false)
+            {
+                try
+                {
+                    Server.Transfer("loginAndCreatePage.aspx", true);
+                }
+                catch(Exception)
+                {
+
+                }
+            }
         }
 
         protected void speedReadLogo_Click(object sender, ImageClickEventArgs e)

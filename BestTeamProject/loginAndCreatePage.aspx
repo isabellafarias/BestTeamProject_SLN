@@ -89,7 +89,7 @@
         <tr>
             <td class="auto-style9">Email Address:</td>
             <td class="auto-style17">
-                <asp:TextBox ID="createEmailAddressTextBox" runat="server" Width="202px"></asp:TextBox>
+                <asp:TextBox ID="createEmailAddressTextBox" runat="server" Width="202px" TextMode="Email"></asp:TextBox>
             </td>
             <td class="auto-style20">
                 <asp:CustomValidator ID="emailValidator" runat="server" ControlToValidate="createEmailAddressTextBox" ErrorMessage="Email Address is already in use." ForeColor="Red"></asp:CustomValidator>
