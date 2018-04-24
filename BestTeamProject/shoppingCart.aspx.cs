@@ -175,7 +175,7 @@ namespace BestTeamProject
                 Globals.conn.Close();
 
                 
-                Server.Transfer("shoppingCart.aspx", true);
+                Server.Transfer("HomePage.aspx", true);
             }
         }
 
