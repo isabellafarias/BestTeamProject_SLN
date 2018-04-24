@@ -1,4 +1,4 @@
-﻿var updateCart = function(inputObject){
+﻿let updateCart = (inputObject) => {
     var id = inputObject.id;
     var idNumber = id.substr(id.length - 3);
 

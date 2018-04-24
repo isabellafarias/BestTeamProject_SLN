@@ -34,7 +34,7 @@
         </table>
 
         <div id="buttons">
-            <asp:Button ID="btnPurchase" runat="server" Text="Purchase" class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White"/> <br />
+            <asp:Button ID="btnPurchase" runat="server" Text="Purchase" class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White" OnClick="btnPurchase_Click"/> <br />
             <asp:Button ID="btnContinue" runat="server" Text="Continue Shopping"  class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White" OnClick="Button2_Click"/> <br />
             <asp:Button ID="btnClear" runat="server" Text="Clear Cart"  class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White" OnClick="Button3_Click"/> <br />
         </div>
@@ -46,6 +46,7 @@
         <asp:Label ID="lblOutput" runat="server" Text="Label"></asp:Label>
     </div>
     <br />
+
     <br />
     <br />
 
