@@ -151,7 +151,7 @@
                 <asp:CustomValidator ID="emailValidator" runat="server" ControlToValidate="createEmailAddressTextBox" ErrorMessage="Email Address is already in use." ForeColor="Red"></asp:CustomValidator>
             </td>
             <td class="auto-style30" colspan="2">
-                <asp:Button ID="loginButton" runat="server" Text="Login" Width="96px" OnClick="loginButton_Click" />
+                <asp:Button ID="loginButton" runat="server" AutoPostBack="False" Text="Login" Width="96px" OnClick="loginButton_Click" />
             &nbsp;&nbsp;
                 </td>
         </tr>
