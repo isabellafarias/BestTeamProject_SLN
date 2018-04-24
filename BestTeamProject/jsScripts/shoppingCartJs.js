@@ -11,16 +11,9 @@
     let newTotal = inputObject.value * cartPrice.innerHTML;
     let oldTotal = Number(cartTotal.innerHTML);
 
-    console.log('new Total', newTotal);
-    console.log('old Total', oldTotal);
-
-    console.log('grand total value', grandTotalValue)
-
+   
     grandTotalValue = grandTotalValue + (newTotal - oldTotal);
-
-  
-
-    console.log('grand total value', grandTotalValue)
+    
 
     cartQuantity.innerHTML = inputObject.value; 
     cartTotal.innerHTML = round(newTotal, 2);

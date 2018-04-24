@@ -9,17 +9,24 @@
 
 
 
+        .auto-style5 {
+            height: 26px;
+        }
+
+
+
+
         </style>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="totals" style="font-family:Tw Cen MT; color:#333333">
-        <table id="totalsTable">
+        <table id="totalsTable" aria-dropeffect="none">
             <tr class="topRow" id="topRowID">
-                <td>Item</td>
-                <td>Price</td>
-                <td>Quantity</td>
-                <td>Total</td>
+                <td class="auto-style5">Item</td>
+                <td class="auto-style5">Price</td>
+                <td class="auto-style5">Quantity</td>
+                <td class="auto-style5">Total</td>
             </tr>
 
             <asp:Label ID="lblTable" runat="server" Text="results" Visible="False"></asp:Label>
@@ -27,15 +34,15 @@
         </table>
 
         <div id="buttons">
-            <asp:Button ID="topButton" runat="server" Text="Purchase" class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White"/> <br />
-            <asp:Button ID="Button2" runat="server" Text="Continue Shopping"  class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White" OnClick="Button2_Click"/> <br />
-            <asp:Button ID="Button3" runat="server" Text="Clear Cart"  class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White"/> <br />
+            <asp:Button ID="btnPurchase" runat="server" Text="Purchase" class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White"/> <br />
+            <asp:Button ID="btnContinue" runat="server" Text="Continue Shopping"  class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White" OnClick="Button2_Click"/> <br />
+            <asp:Button ID="btnClear" runat="server" Text="Clear Cart"  class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White" OnClick="Button3_Click"/> <br />
         </div>
 
     </div>
 
     <div id="dynamicCart">
-        <asp:Label ID="lblName" runat="server" Text="Label"></asp:Label> <br /> <br />
+        <asp:Label ID="lblEmpty" runat="server" Text="Oops! Your cart is empty! :(" CssClass="emptyCart"></asp:Label>
         <asp:Label ID="lblOutput" runat="server" Text="Label"></asp:Label>
     </div>
     <br />

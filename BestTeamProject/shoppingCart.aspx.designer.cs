@@ -22,40 +22,40 @@ namespace BestTeamProject {
         protected global::System.Web.UI.WebControls.Label lblTable;
         
         /// <summary>
-        /// topButton control.
+        /// btnPurchase control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button topButton;
+        protected global::System.Web.UI.WebControls.Button btnPurchase;
         
         /// <summary>
-        /// Button2 control.
+        /// btnContinue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button btnContinue;
         
         /// <summary>
-        /// Button3 control.
+        /// btnClear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button btnClear;
         
         /// <summary>
-        /// lblName control.
+        /// lblEmpty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblName;
+        protected global::System.Web.UI.WebControls.Label lblEmpty;
         
         /// <summary>
         /// lblOutput control.
