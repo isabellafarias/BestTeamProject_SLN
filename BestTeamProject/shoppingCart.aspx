@@ -28,13 +28,14 @@
 
         <div id="buttons">
             <asp:Button ID="topButton" runat="server" Text="Purchase" class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White"/> <br />
-            <asp:Button ID="Button2" runat="server" Text="Continue Shopping"  class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White"/> <br />
+            <asp:Button ID="Button2" runat="server" Text="Continue Shopping"  class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White" OnClick="Button2_Click"/> <br />
             <asp:Button ID="Button3" runat="server" Text="Clear Cart"  class="shoppingCartButton" BackColor="#2F92C2" ForeColor="White"/> <br />
         </div>
 
     </div>
 
     <div id="dynamicCart">
+        <asp:Label ID="lblName" runat="server" Text="Label"></asp:Label> <br /> <br />
         <asp:Label ID="lblOutput" runat="server" Text="Label"></asp:Label>
     </div>
     <br />

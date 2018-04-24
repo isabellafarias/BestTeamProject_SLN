@@ -15,111 +15,114 @@ namespace BestTeamProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            isbnList.Clear();
-
-            //gather search values
-            string searchTextboxValue = (string)Session[0];
-            string searchByValue = (string)Session[1];
-            
-            //setup database
-            Globals.conn.Open();
-
-            string query = "SELECT * FROM book";
-
-            var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
-            var reader = cmd.ExecuteReader();
-
-
-            while (reader.Read())
+            if (System.Web.HttpContext.Current.Session["SearchValue"] != null && System.Web.HttpContext.Current.Session["SearchByValue"] != null)
             {
-                Image bookImage = new Image();
-                bookImage.ImageUrl = (string)reader["imageURL"];
-                bookImage.Height = 120;
+                isbnList.Clear();
 
-                string isbnVal = (string)reader["ISBN"];
-                string titleVal = (string)reader["Title"];
-                string authorVal = (string)reader["Author"];
-                string priceVal = $"{reader["Price"]}";
-                string qtyVal = $"{reader["Quantity"]}";       
+                //gather search values
+                string searchTextboxValue = (string)Session["SearchValue"];
+                string searchByValue = (string)Session["SearchByValue"];
 
-                string dbSearchVal = (string)reader[searchByValue];
-                dbSearchVal = dbSearchVal.ToUpper();
+                //setup database
+                Globals.conn.Open();
 
-                if (dbSearchVal.Contains($"{searchTextboxValue.ToUpper()}"))
+                string query = "SELECT * FROM book";
+
+                var cmd = new MySql.Data.MySqlClient.MySqlCommand(query, Globals.conn);
+                var reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
                 {
-                    isbnList.Add((string)reader["ISBN"]);
+                    Image bookImage = new Image();
+                    bookImage.ImageUrl = (string)reader["imageURL"];
+                    bookImage.Height = 120;
 
-                    TableRow newRow = new TableRow();
-                    TableCell bookImageCell = new TableCell();
-                    TableCell isbnCell = new TableCell();
-                    TableCell title = new TableCell();
-                    TableCell author = new TableCell();
-                    TableCell price = new TableCell();
-                    TableCell qty = new TableCell();                    
-                    TableCell addButtonCell = new TableCell();
+                    string isbnVal = (string)reader["ISBN"];
+                    string titleVal = (string)reader["Title"];
+                    string authorVal = (string)reader["Author"];
+                    string priceVal = $"{reader["Price"]}";
+                    string qtyVal = $"{reader["Quantity"]}";
+
+                    string dbSearchVal = (string)reader[searchByValue];
+                    dbSearchVal = dbSearchVal.ToUpper();
+
+                    if (dbSearchVal.Contains($"{searchTextboxValue.ToUpper()}"))
+                    {
+                        isbnList.Add((string)reader["ISBN"]);
+
+                        TableRow newRow = new TableRow();
+                        TableCell bookImageCell = new TableCell();
+                        TableCell isbnCell = new TableCell();
+                        TableCell title = new TableCell();
+                        TableCell author = new TableCell();
+                        TableCell price = new TableCell();
+                        TableCell qty = new TableCell();
+                        TableCell addButtonCell = new TableCell();
 
 
-                    bookImageCell.Controls.Add(bookImage);
+                        bookImageCell.Controls.Add(bookImage);
 
-                    HyperLink titleLink = new HyperLink();
-                    titleLink.Text = titleVal;
-                    titleLink.NavigateUrl = "productPage.aspx?isbn=" + isbnVal;
-                    title.Controls.Add(titleLink);
+                        HyperLink titleLink = new HyperLink();
+                        titleLink.Text = titleVal;
+                        titleLink.NavigateUrl = "productPage.aspx?isbn=" + isbnVal;
+                        title.Controls.Add(titleLink);
 
-                    isbnCell.Text = isbnVal;
-                    author.Text = authorVal;
-                    price.Text = "$" + priceVal;
-                    qty.Text = qtyVal;
+                        isbnCell.Text = isbnVal;
+                        author.Text = authorVal;
+                        price.Text = "$" + priceVal;
+                        qty.Text = qtyVal;
 
-                    Button addButton = new Button();
-                    addButton.ID = $"{isbnVal}";
-                    addButton.Click += delegate
-                    {        
+                        Button addButton = new Button();
+                        addButton.ID = $"{isbnVal}";
+                        addButton.Click += delegate
+                        {
                         //NEED TO INPUT USER ID HERE INSTEAD OF MY NAME
                         string query2 = $"insert into cart values (\"{isbnVal}\",\"ifarias\")";
 
-                        MySqlCommand MyCommand2 = new MySqlCommand(query2, Globals.conn);
-                        MySqlDataReader reader2;
-                        Globals.conn.Close();
-                        Globals.conn.Open();
-                        reader2 = MyCommand2.ExecuteReader();
-                        while (reader2.Read())
-                        { }
-                        Globals.conn.Close();
+                            MySqlCommand MyCommand2 = new MySqlCommand(query2, Globals.conn);
+                            MySqlDataReader reader2;
+                            Globals.conn.Close();
+                            Globals.conn.Open();
+                            reader2 = MyCommand2.ExecuteReader();
+                            while (reader2.Read())
+                            { }
+                            Globals.conn.Close();
 
-                        addButton.Visible = false;
+                            addButton.Visible = false;
 
-                        string query3 = $"update book set Quantity=Quantity-1 where ISBN = \'{isbnVal}\'";
+                            string query3 = $"update book set Quantity=Quantity-1 where ISBN = \'{isbnVal}\'";
 
-                        MySqlCommand MyCommand3 = new MySqlCommand(query3, Globals.conn);
-                        MySqlDataReader reader3;
-                        Globals.conn.Close();
-                        Globals.conn.Open();
-                        reader3 = MyCommand3.ExecuteReader();
-                        while (reader3.Read())
-                        { }
-                        Globals.conn.Close();
+                            MySqlCommand MyCommand3 = new MySqlCommand(query3, Globals.conn);
+                            MySqlDataReader reader3;
+                            Globals.conn.Close();
+                            Globals.conn.Open();
+                            reader3 = MyCommand3.ExecuteReader();
+                            while (reader3.Read())
+                            { }
+                            Globals.conn.Close();
 
-                    };
+                        };
 
-                    addButton.Text = "Add to Cart";
-                    addButtonCell.Controls.Add(addButton);
+                        addButton.Text = "Add to Cart";
+                        addButtonCell.Controls.Add(addButton);
 
-                    newRow.Cells.Add(bookImageCell);
-                    newRow.Cells.Add(isbnCell);
-                    newRow.Cells.Add(title);
-                    newRow.Cells.Add(author);
-                    newRow.Cells.Add(price);
-                    newRow.Cells.Add(qty);
-                    newRow.Cells.Add(addButtonCell);
+                        newRow.Cells.Add(bookImageCell);
+                        newRow.Cells.Add(isbnCell);
+                        newRow.Cells.Add(title);
+                        newRow.Cells.Add(author);
+                        newRow.Cells.Add(price);
+                        newRow.Cells.Add(qty);
+                        newRow.Cells.Add(addButtonCell);
 
-                    resultsTable.Rows.Add(newRow);
+                        resultsTable.Rows.Add(newRow);
 
 
+                    }
                 }
+                reader.Close();
+                Globals.conn.Close();
             }
-            reader.Close();
-            Globals.conn.Close();
         }
 
         void addButtonClick(object s, EventArgs ea)
