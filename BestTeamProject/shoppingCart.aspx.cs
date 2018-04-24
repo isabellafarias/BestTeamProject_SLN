@@ -13,7 +13,7 @@ namespace BestTeamProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["userName"] = "joe@gmail.com";
+            //Session["userName"] = "joe@gmail.com";
 
 
             if (System.Web.HttpContext.Current.Session["userName"] != null)
