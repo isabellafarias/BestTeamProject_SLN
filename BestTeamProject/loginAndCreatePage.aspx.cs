@@ -110,7 +110,8 @@ namespace BestTeamProject
                 Session["userName"] = userName;
                 loggedIn = true;
                 Session["loggedIn"] = loggedIn.ToString();
-                
+                Server.Transfer("profilePage.aspx", true);
+
             }
             else
             {

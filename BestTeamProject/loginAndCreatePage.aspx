@@ -103,6 +103,16 @@
             text-align: center;
             height: 25px;
         }
+        .auto-style35 {
+            width: 1119px;
+            text-align: right;
+            height: 25px;
+        }
+        .auto-style36 {
+            width: 375px;
+            text-align: left;
+            height: 25px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -119,14 +129,14 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style9">First Name:</td>
-            <td class="auto-style17">
+            <td class="auto-style31">First Name:</td>
+            <td class="auto-style32">
                 <asp:TextBox ID="createFirstNameTextBox" runat="server" Width="203px"></asp:TextBox>
             </td>
-            <td class="auto-style23">
-                &nbsp;</td>
-            <td class="auto-style19">Email Address:</td>
-            <td class="auto-style22">
+            <td class="auto-style33">
+            </td>
+            <td class="auto-style35">Email Address:</td>
+            <td class="auto-style36">
                 <asp:TextBox ID="loginEmailAddressTextBox" runat="server" Width="171px"></asp:TextBox>
             </td>
         </tr>
