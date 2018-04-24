@@ -59,8 +59,15 @@ namespace BestTeamProject
             Session["SearchValue"] = searchTextBox.Text;
             Session["SearchByValue"] = DropDownList1.SelectedValue;
 
+            if(Server.Equals("searchResultsPage.aspx"))
+            {
+                Response.Redirect(Request.RawUrl);
+
+            }
+            else
+            { 
             Server.Transfer("searchResultsPage.aspx", true);
-            
+            }
         }
 
 
