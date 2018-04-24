@@ -34,17 +34,21 @@
             <td class="auto-style6">
                 <asp:Image ID="Image1" runat="server" Height="161px" ImageUrl="~/Photos/book.png" Width="175px" CssClass="auto-style9" />
                 <br class="auto-style9" />
-                <span class="auto-style9">Profile Picture Placeholder</span></td>
+                </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style8">Users First and Last Names</td>
+            <td class="auto-style8">
+                <asp:Label ID="nameLabel" runat="server" Text="You must login"></asp:Label>
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style8">Users Email Address</td>
+            <td class="auto-style8">
+                <asp:Label ID="emailLabel" runat="server" Text="to view the profile page."></asp:Label>
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
