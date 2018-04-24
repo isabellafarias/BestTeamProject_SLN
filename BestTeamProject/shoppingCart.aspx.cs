@@ -13,7 +13,7 @@ namespace BestTeamProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["userName"] = "joe@gmail.com";
+            //Session["userName"] = "joe@gmail.com";
 
 
             if (System.Web.HttpContext.Current.Session["userName"] != null)
@@ -96,6 +96,18 @@ namespace BestTeamProject
 
 
                     lblTable.Text = lblTable.Text + $"" +
+                        $"<tr>" +
+                                $"<td></td>" +
+                                $"<td></td>" +
+                                $"<td></td>" +
+                                $"<td ></td>" +
+                            $"</tr>" +
+                            $"<tr>" +
+                                $"<td></td>" +
+                                $"<td></td>" +
+                                $"<td></td>" +
+                                $"<td></td>" +
+                            $"</tr>" +
 
                         $"<tr>" +
                                 $"<td>Sales Tax</td>" +
@@ -104,7 +116,7 @@ namespace BestTeamProject
                                 $"<td id='tax'>{tax}</td>" +
                             $"</tr>"+
                             $"<tr>" +
-                                $"<td>shipping</td>" +
+                                $"<td>Shipping</td>" +
                                 $"<td></td>" +
                                 $"<td></td>" +
                                 $"<td id='shipping'>{shipping}</td>" +
