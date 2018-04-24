@@ -13,7 +13,7 @@ namespace BestTeamProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Session["userName"] = "joe@gmail.com";
+            Session["userName"] = "joe@gmail.com";
 
 
             if (System.Web.HttpContext.Current.Session["userName"] != null)
@@ -90,10 +90,25 @@ namespace BestTeamProject
                     lblOutput.Text = lblOutput.Text + "</form>";
 
 
-
+                    double tax = cartTotal * .07;
+                    double shipping = cartTotal * .01;
+                    cartTotal = cartTotal + tax + shipping;
 
 
                     lblTable.Text = lblTable.Text + $"" +
+
+                        $"<tr>" +
+                                $"<td>Sales Tax</td>" +
+                                $"<td></td>" +
+                                $"<td></td>" +
+                                $"<td id='tax'>{tax}</td>" +
+                            $"</tr>"+
+                            $"<tr>" +
+                                $"<td>shipping</td>" +
+                                $"<td></td>" +
+                                $"<td></td>" +
+                                $"<td id='shipping'>{shipping}</td>" +
+                            $"</tr>" +
                             $"<tr>" +
                                 $"<td>Total</td>" +
                                 $"<td></td>" +
