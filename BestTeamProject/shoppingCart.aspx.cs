@@ -90,5 +90,12 @@ namespace BestTeamProject
                 lblOutput.Visible = false;
             }
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Session["SearchValue"] = "a";
+            Session["SearchByValue"] = "Title";
+            Server.Transfer("searchResultsPage.aspx", true);
+        }
     }
   }
