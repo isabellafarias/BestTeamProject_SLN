@@ -13,7 +13,7 @@ namespace BestTeamProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Session["userName"] = "joe@gmail.com";
+            Session["userName"] = "joe@gmail.com";
 
 
             if (System.Web.HttpContext.Current.Session["userName"] != null)
@@ -66,8 +66,7 @@ namespace BestTeamProject
                                 $"<img id='Image1' class='bookImg' src='{reader["ImageURL"]}'/>" +
                                 "<p class='itemLabel'>" + reader["Title"] + "</p> <br /> <p class='priceLabel'> " + reader["Price"] + "</p>" +
                                 "<div class='options'>" +
-                                    "<p class='remove' id='remove" + counter.ToString() + "'>Remove</p>" +
-                                    "<p class='midBar'>|</p>" +
+                                
                                     "<p class='quantityLabel' >Quantitiy: </p>" +
                                     "<input class='quantity' type='text' value='1' name='book" + counter.ToString() + "' id='quantity" + counter.ToString() + "' onChange='updateCart(this)'/>" +
                                 "<div>" +
